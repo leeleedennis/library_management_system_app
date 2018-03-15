@@ -51,6 +51,12 @@
     <Compile Include="Add_Book.Designer.cs">
       <DependentUpon>Add_Book.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Check_In_Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="Add_Book.resx">
       <DependentUpon>Add_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Check_In_Book.resx">
       <DependentUpon>Check_In_Book.cs</DependentUpon>

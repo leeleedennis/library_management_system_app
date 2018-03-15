@@ -17,6 +17,16 @@ namespace Library_Management_System_App
             InitializeComponent();
         }
 
+        private int status;
+        public void setStatus(int num)
+        {
+            status = num;
+        }
+        public int getStatus()
+        {
+            return status;
+        }
+
         private void login_button_Click(object sender, EventArgs e)
         {
             var username = "admin";
@@ -24,8 +34,8 @@ namespace Library_Management_System_App
 
             if (username == usernameTb.Text && password == passwordTb.Text)
             {
-
                 this.Close();
+                setStatus(1);
             }
             else
             {

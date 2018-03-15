@@ -20,7 +20,7 @@ namespace Library_Management_System_App
         private void clearperiodbutton_Click(object sender, EventArgs e)
         {
             this.categoryTb.Text = "";
-            this.pagenumberTb.Text "";
+            this.pagenumberTb.Text = "";
             this.periodicalnameTb.Text = "";
             this.yearTb.Text = "";
             this.isbnTb.Text = "";

@@ -40,7 +40,7 @@
             // 
             // login_button
             // 
-            this.login_button.BackColor = System.Drawing.Color.BurlyWood;
+            this.login_button.BackColor = System.Drawing.SystemColors.Highlight;
             this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.login_button.Location = new System.Drawing.Point(45, 218);
             this.login_button.Name = "login_button";
@@ -52,7 +52,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.BackColor = System.Drawing.Color.BurlyWood;
+            this.CancelButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.CancelButton.Location = new System.Drawing.Point(173, 218);
             this.CancelButton.Name = "CancelButton";
@@ -76,7 +76,7 @@
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.BackColor = System.Drawing.Color.PeachPuff;
+            this.usernameLbl.BackColor = System.Drawing.Color.Transparent;
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.usernameLbl.Location = new System.Drawing.Point(28, 82);
             this.usernameLbl.Name = "usernameLbl";
@@ -87,7 +87,7 @@
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
-            this.passwordLbl.BackColor = System.Drawing.Color.PeachPuff;
+            this.passwordLbl.BackColor = System.Drawing.Color.Transparent;
             this.passwordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.passwordLbl.Location = new System.Drawing.Point(28, 132);
             this.passwordLbl.Name = "passwordLbl";
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Library_Management_System_App.Properties.Resources.Library;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(355, 289);
             this.Controls.Add(this.forgetLbl);

@@ -53,7 +53,7 @@
             // oldpassword_lbl
             // 
             this.oldpassword_lbl.AutoSize = true;
-            this.oldpassword_lbl.BackColor = System.Drawing.Color.PeachPuff;
+            this.oldpassword_lbl.BackColor = System.Drawing.Color.Transparent;
             this.oldpassword_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.oldpassword_lbl.Location = new System.Drawing.Point(32, 79);
             this.oldpassword_lbl.Name = "oldpassword_lbl";
@@ -73,7 +73,7 @@
             // 
             // resetButtonresetButton
             // 
-            this.resetButtonresetButton.BackColor = System.Drawing.Color.BurlyWood;
+            this.resetButtonresetButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.resetButtonresetButton.Location = new System.Drawing.Point(83, 274);
             this.resetButtonresetButton.Name = "resetButtonresetButton";
             this.resetButtonresetButton.Size = new System.Drawing.Size(75, 23);
@@ -85,7 +85,7 @@
             // newpassword_lbl
             // 
             this.newpassword_lbl.AutoSize = true;
-            this.newpassword_lbl.BackColor = System.Drawing.Color.PeachPuff;
+            this.newpassword_lbl.BackColor = System.Drawing.Color.Transparent;
             this.newpassword_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.newpassword_lbl.Location = new System.Drawing.Point(32, 136);
             this.newpassword_lbl.Name = "newpassword_lbl";
@@ -96,7 +96,7 @@
             // confirm_lbl
             // 
             this.confirm_lbl.AutoSize = true;
-            this.confirm_lbl.BackColor = System.Drawing.Color.PeachPuff;
+            this.confirm_lbl.BackColor = System.Drawing.Color.Transparent;
             this.confirm_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.confirm_lbl.Location = new System.Drawing.Point(32, 194);
             this.confirm_lbl.Name = "confirm_lbl";
@@ -125,7 +125,7 @@
             // 
             // cancelresetButton
             // 
-            this.cancelresetButton.BackColor = System.Drawing.Color.BurlyWood;
+            this.cancelresetButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.cancelresetButton.Location = new System.Drawing.Point(236, 273);
             this.cancelresetButton.Name = "cancelresetButton";
             this.cancelresetButton.Size = new System.Drawing.Size(75, 23);
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Library_Management_System_App.Properties.Resources.Library;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(394, 326);
             this.Controls.Add(this.cancelresetButton);
