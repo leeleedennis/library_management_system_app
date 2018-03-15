@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace Library_Management_System_App
 {
-    public partial class User_Account : Form
+    public partial class Delete_UserAcc : Form
     {
-        public User_Account()
+        public Delete_UserAcc()
         {
             InitializeComponent();
         }
 
-        private void createuserbutton_Click(object sender, EventArgs e)
-        {
-            Create_Account create = new Create_Account();
-            create.Show();
-            this.Hide();
-        }
-
-        private void canceluserbutton_Click(object sender, EventArgs e)
+        private void Cancelbutton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
