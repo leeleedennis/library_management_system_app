@@ -1,0 +1,13 @@
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\bin\Debug\Library_Management_System_App.exe.config
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\bin\Debug\Library_Management_System_App.exe
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\bin\Debug\Library_Management_System_App.pdb
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.csprojResolveAssemblyReference.cache
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.Properties.Resources.resources
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.csproj.GenerateResource.Cache
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.csproj.CoreCompileInputs.cache
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.exe
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.pdb
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.Login_Form.resources
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.Reset_Password.resources
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.Add_Book.resources
+c:\users\user 1\source\repos\Library_Management_System_App\Library_Management_System_App\obj\Debug\Library_Management_System_App.Check_Out_Book.resources
