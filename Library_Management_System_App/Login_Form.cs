@@ -47,7 +47,8 @@ namespace Library_Management_System_App
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.usernameTb.Text = "";
+            this.passwordTb.Text = "";
         }
 
         private void forgetLbl_Click(object sender, EventArgs e)

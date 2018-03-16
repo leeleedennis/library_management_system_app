@@ -20,13 +20,26 @@ namespace Library_Management_System_App
         {
             InitializeComponent();
         }
+        public void hideItems()
+        {
+            menuStrip1.Items[0].Visible = false;
+            menuStrip1.Items[1].Visible = false;
+            menuStrip1.Items[2].Visible = false;
+            menuStrip1.Items[3].Visible = false;
+        }
 
         public void showItems()
         {
+            menuStrip1.Items[0].Visible = true;
             menuStrip1.Items[1].Visible = true;
             menuStrip1.Items[2].Visible = true;
+        }
+
+        public void enterLibrary()
+        {
             menuStrip1.Items[3].Visible = true;
         }
+
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -114,48 +127,36 @@ namespace Library_Management_System_App
 
         private void Administrator_Load(object sender, EventArgs e)
         {
-            if (login.getStatus() != 1)
-            {
-                menuStrip1.Items[1].Visible = false;
-                menuStrip1.Items[2].Visible = false;
-                menuStrip1.Items[3].Visible = false;
-                menuStrip1.Items[4].Visible = false;
-            }
-            else
-            {
-                menuStrip1.Items[0].Visible = false;
-                menuStrip1.Items[1].Visible = false;
-                menuStrip1.Items[2].Visible = false;
-                menuStrip1.Items[3].Visible = false;
-                menuStrip1.Items[4].Visible = false;
-            }
-        }
-
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            menuStrip1.Items[0].Visible = false;
-            menuStrip1.Items[4].Visible = true;
-            //Login_Form login = new Login_Form();
+            hideItems();
+            enterLibrary();
             login.MdiParent = this;
             login.WindowState = FormWindowState.Maximized;
             login.Show();
         }
 
-
         private void enterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (login.getStatus() == 1)
             {
-                menuStrip1.Items[0].Visible = false;
-                menuStrip1.Items[4].Visible = false;
+                menuStrip1.Items[3].Visible = false;
                 showItems();
             }
             else
             {
-                menuStrip1.Items[0].Visible = true;
                 MessageBox.Show("You must Login before entering the Library");
             }
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            login.setStatus(0);
+            hideItems();
+            enterLibrary();
+            Login_Form login1 = new Login_Form();
+            login1.MdiParent = this;
+            login1.WindowState = FormWindowState.Maximized;
+            login1.Show();
+            login = login1;
+        }
     }
 }
-/

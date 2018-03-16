@@ -34,7 +34,6 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.periodicalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +69,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem,
             this.manageToolStripMenuItem,
             this.usersToolStripMenuItem,
             this.logoutToolStripMenuItem,
@@ -80,13 +78,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -102,25 +93,25 @@
             // booksToolStripMenuItem
             // 
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.booksToolStripMenuItem.Text = "Book";
             // 
             // periodicalsToolStripMenuItem
             // 
             this.periodicalsToolStripMenuItem.Name = "periodicalsToolStripMenuItem";
-            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.periodicalsToolStripMenuItem.Text = "Periodical";
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkInToolStripMenuItem.Text = "Check-In";
             // 
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             // 
             // usersToolStripMenuItem
@@ -163,6 +154,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // enterToolStripMenuItem
             // 
@@ -197,7 +189,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem periodicalsToolStripMenuItem;
