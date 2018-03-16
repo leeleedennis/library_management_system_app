@@ -36,16 +36,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.periodicalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memberInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,8 @@
             this.loginToolStripMenuItem,
             this.manageToolStripMenuItem,
             this.usersToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.enterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
@@ -97,6 +99,30 @@
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.manageToolStripMenuItem.Text = "Manage";
             // 
+            // booksToolStripMenuItem
+            // 
+            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.booksToolStripMenuItem.Text = "Book";
+            // 
+            // periodicalsToolStripMenuItem
+            // 
+            this.periodicalsToolStripMenuItem.Name = "periodicalsToolStripMenuItem";
+            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.periodicalsToolStripMenuItem.Text = "Periodical";
+            // 
+            // checkInToolStripMenuItem
+            // 
+            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.checkInToolStripMenuItem.Text = "Check-In";
+            // 
+            // checkOutToolStripMenuItem
+            // 
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.checkOutToolStripMenuItem.Text = "Check-Out";
+            // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,36 +133,6 @@
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.usersToolStripMenuItem.Text = "Members";
-            // 
-            // booksToolStripMenuItem
-            // 
-            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.booksToolStripMenuItem.Text = "Book";
-            // 
-            // periodicalsToolStripMenuItem
-            // 
-            this.periodicalsToolStripMenuItem.Name = "periodicalsToolStripMenuItem";
-            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.periodicalsToolStripMenuItem.Text = "Periodical";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
-            // checkInToolStripMenuItem
-            // 
-            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.checkInToolStripMenuItem.Text = "Check-In";
-            // 
-            // checkOutToolStripMenuItem
-            // 
-            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.checkOutToolStripMenuItem.Text = "Check-Out";
             // 
             // createAccountToolStripMenuItem
             // 
@@ -161,6 +157,19 @@
             this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
             this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.resetPasswordToolStripMenuItem.Text = "Reset Password";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // enterToolStripMenuItem
+            // 
+            this.enterToolStripMenuItem.Name = "enterToolStripMenuItem";
+            this.enterToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.enterToolStripMenuItem.Text = "Enter Library";
+            this.enterToolStripMenuItem.Click += new System.EventHandler(this.enterToolStripMenuItem_Click);
             // 
             // Administrator
             // 
@@ -200,6 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem memberInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enterToolStripMenuItem;
     }
 }
 
