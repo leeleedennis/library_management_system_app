@@ -344,7 +344,7 @@
             this.Controls.Add(this.booksubLbl);
             this.Controls.Add(this.bookTitle);
             this.Name = "Add_Book";
-            this.Text = "Add_Book";
+            this.Text = "Book Register";
             this.Load += new System.EventHandler(this.Add_Book_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

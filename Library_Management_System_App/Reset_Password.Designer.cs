@@ -151,7 +151,7 @@
             this.Controls.Add(this.oldpassword_lbl);
             this.Controls.Add(this.label1);
             this.Name = "Reset_Password";
-            this.Text = "Reset_Password";
+            this.Text = "Reset Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 

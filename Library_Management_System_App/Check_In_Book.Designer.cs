@@ -166,7 +166,7 @@
             this.Controls.Add(this.checkInbookIdLbl);
             this.Controls.Add(this.label1);
             this.Name = "Check_In_Book";
-            this.Text = "Return_Book";
+            this.Text = "Return Book";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -252,7 +252,7 @@
             this.Controls.Add(this.sudentidLbl);
             this.Controls.Add(this.label1);
             this.Name = "Member_Information";
-            this.Text = "Member_Information";
+            this.Text = "Student Register";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -75,11 +75,11 @@
     <Compile Include="Create_Account.Designer.cs">
       <DependentUpon>Create_Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete_UserAcc.cs">
+    <Compile Include="Disable_UserAcc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delete_UserAcc.Designer.cs">
-      <DependentUpon>Delete_UserAcc.cs</DependentUpon>
+    <Compile Include="Disable_UserAcc.Designer.cs">
+      <DependentUpon>Disable_UserAcc.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="Create_Account.resx">
       <DependentUpon>Create_Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delete_UserAcc.resx">
-      <DependentUpon>Delete_UserAcc.cs</DependentUpon>
+    <EmbeddedResource Include="Disable_UserAcc.resx">
+      <DependentUpon>Disable_UserAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

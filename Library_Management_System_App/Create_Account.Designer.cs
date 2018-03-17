@@ -188,7 +188,7 @@
             this.Controls.Add(this.usertypeLb);
             this.Controls.Add(this.titleLabl);
             this.Name = "Create_Account";
-            this.Text = "Create_Account";
+            this.Text = "Create New Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 

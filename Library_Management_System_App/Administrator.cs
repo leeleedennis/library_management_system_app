@@ -158,5 +158,69 @@ namespace Library_Management_System_App
             login1.Show();
             login = login1;
         }
+
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Book book = new Add_Book();
+            book.MdiParent = this;
+            book.WindowState = FormWindowState.Maximized;
+            book.Show();
+        }
+
+        private void periodicalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Periodical paper = new Periodical();
+            paper.MdiParent = this;
+            paper.WindowState = FormWindowState.Maximized;
+            paper.Show();
+        }
+
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Check_In_Book returnBk = new Check_In_Book();
+            returnBk.MdiParent = this;
+            returnBk.WindowState = FormWindowState.Maximized;
+            returnBk.Show();
+        }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Check_Out_Book borrowBk = new Check_Out_Book();
+            borrowBk.MdiParent = this;
+            borrowBk.WindowState = FormWindowState.Maximized;
+            borrowBk.Show();
+        }
+
+        private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Create_Account newAcc = new Create_Account();
+            newAcc.MdiParent = this;
+            newAcc.WindowState = FormWindowState.Maximized;
+            newAcc.Show();
+        }
+
+        private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Disable_UserAcc disabled = new Disable_UserAcc();
+            disabled.MdiParent = this;
+            disabled.WindowState = FormWindowState.Maximized;
+            disabled.Show();
+        }
+
+        private void memberInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Member_Information users = new Member_Information();
+            users.MdiParent = this;
+            users.WindowState = FormWindowState.Maximized;
+            users.Show();
+        }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reset_Password reset = new Reset_Password();
+            reset.MdiParent = this;
+            reset.WindowState = FormWindowState.Maximized;
+            reset.Show();
+        }
     }
 }

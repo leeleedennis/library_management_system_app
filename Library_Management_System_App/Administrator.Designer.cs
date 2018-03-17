@@ -94,25 +94,29 @@
             // 
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
             this.booksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.booksToolStripMenuItem.Text = "Book";
+            this.booksToolStripMenuItem.Text = "Book Register";
+            this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // periodicalsToolStripMenuItem
             // 
             this.periodicalsToolStripMenuItem.Name = "periodicalsToolStripMenuItem";
             this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.periodicalsToolStripMenuItem.Text = "Periodical";
+            this.periodicalsToolStripMenuItem.Click += new System.EventHandler(this.periodicalsToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
             this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkInToolStripMenuItem.Text = "Check-In";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
             this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -128,26 +132,30 @@
             // createAccountToolStripMenuItem
             // 
             this.createAccountToolStripMenuItem.Name = "createAccountToolStripMenuItem";
-            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.createAccountToolStripMenuItem.Text = "Create Account";
+            this.createAccountToolStripMenuItem.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
             // 
             // deleteAccountToolStripMenuItem
             // 
             this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
-            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.deleteAccountToolStripMenuItem.Text = "Delete Account";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.deleteAccountToolStripMenuItem.Text = "Manage Users";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
             // 
             // memberInformationToolStripMenuItem
             // 
             this.memberInformationToolStripMenuItem.Name = "memberInformationToolStripMenuItem";
-            this.memberInformationToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.memberInformationToolStripMenuItem.Text = "Member Information";
+            this.memberInformationToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.memberInformationToolStripMenuItem.Text = "Student Register";
+            this.memberInformationToolStripMenuItem.Click += new System.EventHandler(this.memberInformationToolStripMenuItem_Click);
             // 
             // resetPasswordToolStripMenuItem
             // 
             this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
-            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.resetPasswordToolStripMenuItem.Text = "Reset Password";
+            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
