@@ -14,7 +14,7 @@ namespace Library_Management_System_App
     {
         private int childFormNumber = 0;
 
-        Login_Form login = new Login_Form();
+        public bool verified = false;
 
         public Administrator()
         {
@@ -129,6 +129,7 @@ namespace Library_Management_System_App
         {
             hideItems();
             enterLibrary();
+            Login_Form login = new Login_Form();
             login.MdiParent = this;
             login.WindowState = FormWindowState.Maximized;
             login.Show();
@@ -136,7 +137,7 @@ namespace Library_Management_System_App
 
         private void enterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (login.getStatus() == 1)
+            if (verified == true)
             {
                 menuStrip1.Items[3].Visible = false;
                 showItems();
@@ -149,14 +150,13 @@ namespace Library_Management_System_App
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            login.setStatus(0);
+            verified = false;
             hideItems();
             enterLibrary();
-            Login_Form login1 = new Login_Form();
-            login1.MdiParent = this;
-            login1.WindowState = FormWindowState.Maximized;
-            login1.Show();
-            login = login1;
+            Login_Form login = new Login_Form();
+            login.MdiParent = this;
+            login.WindowState = FormWindowState.Maximized;
+            login.Show();
         }
 
         private void booksToolStripMenuItem_Click(object sender, EventArgs e)
