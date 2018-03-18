@@ -27,6 +27,7 @@ namespace Library_Management_System_App
                 var parent = (Administrator)this.MdiParent;
                 parent.verified = true;
                 this.Hide();
+                parent.showItems();
             }
             else
             {

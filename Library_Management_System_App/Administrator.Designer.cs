@@ -45,7 +45,6 @@
             this.memberInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,8 +70,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem,
             this.usersToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.enterToolStripMenuItem});
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
@@ -164,17 +162,11 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // enterToolStripMenuItem
-            // 
-            this.enterToolStripMenuItem.Name = "enterToolStripMenuItem";
-            this.enterToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.enterToolStripMenuItem.Text = "Enter Library";
-            this.enterToolStripMenuItem.Click += new System.EventHandler(this.enterToolStripMenuItem_Click);
-            // 
             // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
@@ -208,7 +200,6 @@
         private System.Windows.Forms.ToolStripMenuItem memberInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enterToolStripMenuItem;
     }
 }
 

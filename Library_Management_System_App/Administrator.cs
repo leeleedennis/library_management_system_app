@@ -25,7 +25,6 @@ namespace Library_Management_System_App
             menuStrip1.Items[0].Visible = false;
             menuStrip1.Items[1].Visible = false;
             menuStrip1.Items[2].Visible = false;
-            menuStrip1.Items[3].Visible = false;
         }
 
         public void showItems()
@@ -33,11 +32,6 @@ namespace Library_Management_System_App
             menuStrip1.Items[0].Visible = true;
             menuStrip1.Items[1].Visible = true;
             menuStrip1.Items[2].Visible = true;
-        }
-
-        public void enterLibrary()
-        {
-            menuStrip1.Items[3].Visible = true;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -128,34 +122,19 @@ namespace Library_Management_System_App
         private void Administrator_Load(object sender, EventArgs e)
         {
             hideItems();
-            enterLibrary();
             Login_Form login = new Login_Form();
             login.MdiParent = this;
-            login.WindowState = FormWindowState.Maximized;
+            //login.WindowState = FormWindowState.Maximized;
             login.Show();
-        }
-
-        private void enterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (verified == true)
-            {
-                menuStrip1.Items[3].Visible = false;
-                showItems();
-            }
-            else
-            {
-                MessageBox.Show("You must Login before entering the Library");
-            }
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             verified = false;
             hideItems();
-            enterLibrary();
             Login_Form login = new Login_Form();
             login.MdiParent = this;
-            login.WindowState = FormWindowState.Maximized;
+            //login.WindowState = FormWindowState.Maximized;
             login.Show();
         }
 
@@ -163,7 +142,7 @@ namespace Library_Management_System_App
         {
             Add_Book book = new Add_Book();
             book.MdiParent = this;
-            book.WindowState = FormWindowState.Maximized;
+            //book.WindowState = FormWindowState.Maximized;
             book.Show();
         }
 
@@ -171,7 +150,7 @@ namespace Library_Management_System_App
         {
             Periodical paper = new Periodical();
             paper.MdiParent = this;
-            paper.WindowState = FormWindowState.Maximized;
+            //paper.WindowState = FormWindowState.Maximized;
             paper.Show();
         }
 
@@ -179,7 +158,7 @@ namespace Library_Management_System_App
         {
             Check_In_Book returnBk = new Check_In_Book();
             returnBk.MdiParent = this;
-            returnBk.WindowState = FormWindowState.Maximized;
+            //returnBk.WindowState = FormWindowState.Maximized;
             returnBk.Show();
         }
 
@@ -187,7 +166,7 @@ namespace Library_Management_System_App
         {
             Check_Out_Book borrowBk = new Check_Out_Book();
             borrowBk.MdiParent = this;
-            borrowBk.WindowState = FormWindowState.Maximized;
+            //borrowBk.WindowState = FormWindowState.Maximized;
             borrowBk.Show();
         }
 
@@ -195,7 +174,7 @@ namespace Library_Management_System_App
         {
             Create_Account newAcc = new Create_Account();
             newAcc.MdiParent = this;
-            newAcc.WindowState = FormWindowState.Maximized;
+            //newAcc.WindowState = FormWindowState.Maximized;
             newAcc.Show();
         }
 
@@ -203,7 +182,7 @@ namespace Library_Management_System_App
         {
             Disable_UserAcc disabled = new Disable_UserAcc();
             disabled.MdiParent = this;
-            disabled.WindowState = FormWindowState.Maximized;
+            //disabled.WindowState = FormWindowState.Maximized;
             disabled.Show();
         }
 
@@ -211,7 +190,7 @@ namespace Library_Management_System_App
         {
             Member_Information users = new Member_Information();
             users.MdiParent = this;
-            users.WindowState = FormWindowState.Maximized;
+            //users.WindowState = FormWindowState.Maximized;
             users.Show();
         }
 
@@ -219,7 +198,7 @@ namespace Library_Management_System_App
         {
             Reset_Password reset = new Reset_Password();
             reset.MdiParent = this;
-            reset.WindowState = FormWindowState.Maximized;
+            //reset.WindowState = FormWindowState.Maximized;
             reset.Show();
         }
     }
