@@ -131,6 +131,10 @@ namespace Library_Management_System_App
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             verified = false;
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
             hideItems();
             Login_Form login = new Login_Form();
             login.MdiParent = this;
