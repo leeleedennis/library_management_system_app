@@ -124,5 +124,25 @@ namespace LMS_WebApplication.Controllers
             }
             base.Dispose(disposing);
         }
-    }
+
+        //Users Login
+        public ActionResult Login(User user)
+        {
+            using (db)
+            {
+                var usr = db.Users.Where(q => q.User_Name == user.User_Name && q.Password == user.Password).FirstOrDefault();
+                if (usr != null)
+                {
+                    Session["Username"] = usr.User_Name.ToString();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Username or password Incorrect");
+                }
+
+            }
+            return View();
+        }
+     }
 }
