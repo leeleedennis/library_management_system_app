@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.titleLbl = new System.Windows.Forms.Label();
             this.isbnlabel = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.paperNoLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.categoryTb = new System.Windows.Forms.TextBox();
+            this.periodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.periodicalnameTb = new System.Windows.Forms.TextBox();
             this.isbnTb = new System.Windows.Forms.TextBox();
             this.volumenumberTb = new System.Windows.Forms.TextBox();
@@ -45,12 +47,31 @@
             this.shelfnumberTb = new System.Windows.Forms.TextBox();
             this.searchTb = new System.Windows.Forms.TextBox();
             this.searchperiodicalLbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PeriodicalDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pageNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shelfNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodicalcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shelfnumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addperiodbutton = new System.Windows.Forms.Button();
             this.updateperiodbutton = new System.Windows.Forms.Button();
             this.deleteperiodbutton = new System.Windows.Forms.Button();
             this.clearperiodbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.Searchbutton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.periodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeriodicalDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -119,9 +140,9 @@
             this.paperNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.paperNoLbl.Location = new System.Drawing.Point(30, 347);
             this.paperNoLbl.Name = "paperNoLbl";
-            this.paperNoLbl.Size = new System.Drawing.Size(115, 20);
+            this.paperNoLbl.Size = new System.Drawing.Size(110, 20);
             this.paperNoLbl.TabIndex = 0;
-            this.paperNoLbl.Text = "Paper Number:";
+            this.paperNoLbl.Text = "Page Number:";
             // 
             // label2
             // 
@@ -135,42 +156,51 @@
             // 
             // categoryTb
             // 
+            this.categoryTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "P_Category", true));
             this.categoryTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.categoryTb.Location = new System.Drawing.Point(195, 114);
             this.categoryTb.Multiline = true;
             this.categoryTb.Name = "categoryTb";
             this.categoryTb.Size = new System.Drawing.Size(242, 28);
-            this.categoryTb.TabIndex = 1;
+            this.categoryTb.TabIndex = 0;
+            // 
+            // periodBindingSource
+            // 
+            this.periodBindingSource.DataSource = typeof(Library_Management_System_App.Period);
             // 
             // periodicalnameTb
             // 
+            this.periodicalnameTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "Name", true));
             this.periodicalnameTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.periodicalnameTb.Location = new System.Drawing.Point(195, 165);
             this.periodicalnameTb.Multiline = true;
             this.periodicalnameTb.Name = "periodicalnameTb";
             this.periodicalnameTb.Size = new System.Drawing.Size(242, 28);
-            this.periodicalnameTb.TabIndex = 2;
+            this.periodicalnameTb.TabIndex = 1;
             // 
             // isbnTb
             // 
+            this.isbnTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "ISBN", true));
             this.isbnTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.isbnTb.Location = new System.Drawing.Point(195, 210);
             this.isbnTb.Multiline = true;
             this.isbnTb.Name = "isbnTb";
             this.isbnTb.Size = new System.Drawing.Size(242, 28);
-            this.isbnTb.TabIndex = 3;
+            this.isbnTb.TabIndex = 2;
             // 
             // volumenumberTb
             // 
+            this.volumenumberTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "Volume_Number", true));
             this.volumenumberTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.volumenumberTb.Location = new System.Drawing.Point(195, 255);
             this.volumenumberTb.Multiline = true;
             this.volumenumberTb.Name = "volumenumberTb";
             this.volumenumberTb.Size = new System.Drawing.Size(242, 28);
-            this.volumenumberTb.TabIndex = 4;
+            this.volumenumberTb.TabIndex = 3;
             // 
             // yearTb
             // 
+            this.yearTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "Year", true));
             this.yearTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.yearTb.Location = new System.Drawing.Point(195, 301);
             this.yearTb.Multiline = true;
@@ -180,6 +210,7 @@
             // 
             // pagenumberTb
             // 
+            this.pagenumberTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "Page_Number", true));
             this.pagenumberTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pagenumberTb.Location = new System.Drawing.Point(195, 349);
             this.pagenumberTb.Multiline = true;
@@ -189,6 +220,7 @@
             // 
             // shelfnumberTb
             // 
+            this.shelfnumberTb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.periodBindingSource, "Shelf_Num", true));
             this.shelfnumberTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.shelfnumberTb.Location = new System.Drawing.Point(195, 393);
             this.shelfnumberTb.Multiline = true;
@@ -199,74 +231,241 @@
             // searchTb
             // 
             this.searchTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.searchTb.Location = new System.Drawing.Point(587, 116);
+            this.searchTb.Location = new System.Drawing.Point(529, 80);
             this.searchTb.Multiline = true;
             this.searchTb.Name = "searchTb";
-            this.searchTb.Size = new System.Drawing.Size(397, 28);
-            this.searchTb.TabIndex = 7;
+            this.searchTb.Size = new System.Drawing.Size(354, 28);
+            this.searchTb.TabIndex = 11;
+            this.searchTb.TextChanged += new System.EventHandler(this.searchTb_TextChanged);
             // 
             // searchperiodicalLbl
             // 
             this.searchperiodicalLbl.AutoSize = true;
             this.searchperiodicalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.searchperiodicalLbl.Location = new System.Drawing.Point(517, 114);
+            this.searchperiodicalLbl.Location = new System.Drawing.Point(459, 80);
             this.searchperiodicalLbl.Name = "searchperiodicalLbl";
             this.searchperiodicalLbl.Size = new System.Drawing.Size(64, 20);
             this.searchperiodicalLbl.TabIndex = 17;
             this.searchperiodicalLbl.Text = "Search:";
             // 
-            // dataGridView1
+            // PeriodicalDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(521, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 250);
-            this.dataGridView1.TabIndex = 18;
+            this.PeriodicalDataGridView.AllowUserToAddRows = false;
+            this.PeriodicalDataGridView.AllowUserToDeleteRows = false;
+            this.PeriodicalDataGridView.AutoGenerateColumns = false;
+            this.PeriodicalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PeriodicalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.pCategoryDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.iSBNDataGridViewTextBoxColumn,
+            this.volumeNumberDataGridViewTextBoxColumn,
+            this.yearDataGridViewTextBoxColumn,
+            this.pageNumberDataGridViewTextBoxColumn,
+            this.shelfNumDataGridViewTextBoxColumn,
+            this.periodicalcategory,
+            this.volumenumber,
+            this.year,
+            this.isbn,
+            this.id,
+            this.shelfnumber,
+            this.name,
+            this.pagenumber});
+            this.PeriodicalDataGridView.DataSource = this.periodBindingSource;
+            this.PeriodicalDataGridView.Location = new System.Drawing.Point(463, 114);
+            this.PeriodicalDataGridView.Name = "PeriodicalDataGridView";
+            this.PeriodicalDataGridView.Size = new System.Drawing.Size(730, 384);
+            this.PeriodicalDataGridView.TabIndex = 18;
+            this.PeriodicalDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PeriodicalDataGridView_CellContentClick);
+            this.PeriodicalDataGridView.SelectionChanged += new System.EventHandler(this.PeriodicalDataGridView_SelectionChanged);
+            this.PeriodicalDataGridView.DoubleClick += new System.EventHandler(this.PeriodicalDataGridView_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 20;
+            // 
+            // pCategoryDataGridViewTextBoxColumn
+            // 
+            this.pCategoryDataGridViewTextBoxColumn.DataPropertyName = "P_Category";
+            this.pCategoryDataGridViewTextBoxColumn.HeaderText = "Periodical Category";
+            this.pCategoryDataGridViewTextBoxColumn.Name = "pCategoryDataGridViewTextBoxColumn";
+            this.pCategoryDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // iSBNDataGridViewTextBoxColumn
+            // 
+            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            // 
+            // volumeNumberDataGridViewTextBoxColumn
+            // 
+            this.volumeNumberDataGridViewTextBoxColumn.DataPropertyName = "Volume_Number";
+            this.volumeNumberDataGridViewTextBoxColumn.HeaderText = "Volume Number";
+            this.volumeNumberDataGridViewTextBoxColumn.Name = "volumeNumberDataGridViewTextBoxColumn";
+            this.volumeNumberDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            // 
+            // pageNumberDataGridViewTextBoxColumn
+            // 
+            this.pageNumberDataGridViewTextBoxColumn.DataPropertyName = "Page_Number";
+            this.pageNumberDataGridViewTextBoxColumn.HeaderText = "Page Number";
+            this.pageNumberDataGridViewTextBoxColumn.Name = "pageNumberDataGridViewTextBoxColumn";
+            // 
+            // shelfNumDataGridViewTextBoxColumn
+            // 
+            this.shelfNumDataGridViewTextBoxColumn.DataPropertyName = "Shelf_Num";
+            this.shelfNumDataGridViewTextBoxColumn.HeaderText = "Shelf Number";
+            this.shelfNumDataGridViewTextBoxColumn.Name = "shelfNumDataGridViewTextBoxColumn";
+            // 
+            // periodicalcategory
+            // 
+            this.periodicalcategory.DataPropertyName = "P_Category";
+            this.periodicalcategory.HeaderText = "Periodical Category";
+            this.periodicalcategory.Name = "periodicalcategory";
+            this.periodicalcategory.Visible = false;
+            this.periodicalcategory.Width = 140;
+            // 
+            // volumenumber
+            // 
+            this.volumenumber.DataPropertyName = "Volume Number";
+            this.volumenumber.HeaderText = "Volume Number";
+            this.volumenumber.Name = "volumenumber";
+            this.volumenumber.Visible = false;
+            this.volumenumber.Width = 200;
+            // 
+            // year
+            // 
+            this.year.DataPropertyName = "Year";
+            this.year.HeaderText = "Year";
+            this.year.Name = "year";
+            this.year.Visible = false;
+            this.year.Width = 70;
+            // 
+            // isbn
+            // 
+            this.isbn.DataPropertyName = "ISBN";
+            this.isbn.HeaderText = "ISBN";
+            this.isbn.Name = "isbn";
+            this.isbn.Visible = false;
+            this.isbn.Width = 70;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            this.id.Width = 20;
+            // 
+            // shelfnumber
+            // 
+            this.shelfnumber.DataPropertyName = "Shelf_Num";
+            this.shelfnumber.HeaderText = "Shelf Number";
+            this.shelfnumber.Name = "shelfnumber";
+            this.shelfnumber.Visible = false;
+            this.shelfnumber.Width = 95;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "Name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.Visible = false;
+            this.name.Width = 120;
+            // 
+            // pagenumber
+            // 
+            this.pagenumber.DataPropertyName = "Page_Number";
+            this.pagenumber.HeaderText = "Page Number";
+            this.pagenumber.Name = "pagenumber";
+            this.pagenumber.Visible = false;
+            this.pagenumber.Width = 95;
             // 
             // addperiodbutton
             // 
             this.addperiodbutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.addperiodbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addperiodbutton.Location = new System.Drawing.Point(285, 477);
+            this.addperiodbutton.Location = new System.Drawing.Point(111, 523);
             this.addperiodbutton.Name = "addperiodbutton";
             this.addperiodbutton.Size = new System.Drawing.Size(111, 38);
-            this.addperiodbutton.TabIndex = 8;
+            this.addperiodbutton.TabIndex = 7;
             this.addperiodbutton.Text = "Add";
             this.addperiodbutton.UseVisualStyleBackColor = false;
+            this.addperiodbutton.Click += new System.EventHandler(this.addperiodbutton_Click);
             // 
             // updateperiodbutton
             // 
             this.updateperiodbutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.updateperiodbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.updateperiodbutton.Location = new System.Drawing.Point(481, 477);
+            this.updateperiodbutton.Location = new System.Drawing.Point(275, 523);
             this.updateperiodbutton.Name = "updateperiodbutton";
             this.updateperiodbutton.Size = new System.Drawing.Size(111, 38);
-            this.updateperiodbutton.TabIndex = 9;
+            this.updateperiodbutton.TabIndex = 8;
             this.updateperiodbutton.Text = "Update";
             this.updateperiodbutton.UseVisualStyleBackColor = false;
+            this.updateperiodbutton.Click += new System.EventHandler(this.updateperiodbutton_Click);
             // 
             // deleteperiodbutton
             // 
             this.deleteperiodbutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.deleteperiodbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.deleteperiodbutton.Location = new System.Drawing.Point(673, 477);
+            this.deleteperiodbutton.Location = new System.Drawing.Point(463, 523);
             this.deleteperiodbutton.Name = "deleteperiodbutton";
             this.deleteperiodbutton.Size = new System.Drawing.Size(111, 38);
-            this.deleteperiodbutton.TabIndex = 10;
+            this.deleteperiodbutton.TabIndex = 9;
             this.deleteperiodbutton.Text = "Delete";
             this.deleteperiodbutton.UseVisualStyleBackColor = false;
+            this.deleteperiodbutton.Click += new System.EventHandler(this.deleteperiodbutton_Click);
             // 
             // clearperiodbutton
             // 
             this.clearperiodbutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.clearperiodbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.clearperiodbutton.Location = new System.Drawing.Point(873, 477);
+            this.clearperiodbutton.Location = new System.Drawing.Point(649, 523);
             this.clearperiodbutton.Name = "clearperiodbutton";
             this.clearperiodbutton.Size = new System.Drawing.Size(111, 38);
-            this.clearperiodbutton.TabIndex = 11;
+            this.clearperiodbutton.TabIndex = 10;
             this.clearperiodbutton.Text = "Clear";
             this.clearperiodbutton.UseVisualStyleBackColor = false;
             this.clearperiodbutton.Click += new System.EventHandler(this.clearperiodbutton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cancelButton.Location = new System.Drawing.Point(827, 523);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(111, 38);
+            this.cancelButton.TabIndex = 19;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // Searchbutton
+            // 
+            this.Searchbutton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Searchbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Searchbutton.Location = new System.Drawing.Point(925, 74);
+            this.Searchbutton.Name = "Searchbutton";
+            this.Searchbutton.Size = new System.Drawing.Size(95, 33);
+            this.Searchbutton.TabIndex = 20;
+            this.Searchbutton.Text = "View";
+            this.Searchbutton.UseVisualStyleBackColor = false;
+            this.Searchbutton.Click += new System.EventHandler(this.Searchbutton_Click);
             // 
             // Periodical
             // 
@@ -274,11 +473,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1032, 573);
+            this.Controls.Add(this.Searchbutton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.clearperiodbutton);
             this.Controls.Add(this.deleteperiodbutton);
             this.Controls.Add(this.updateperiodbutton);
             this.Controls.Add(this.addperiodbutton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PeriodicalDataGridView);
             this.Controls.Add(this.searchperiodicalLbl);
             this.Controls.Add(this.searchTb);
             this.Controls.Add(this.shelfnumberTb);
@@ -298,7 +499,9 @@
             this.Controls.Add(this.label1);
             this.Name = "Periodical";
             this.Text = "Periodical";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Periodical_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.periodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeriodicalDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,10 +526,29 @@
         private System.Windows.Forms.TextBox shelfnumberTb;
         private System.Windows.Forms.TextBox searchTb;
         private System.Windows.Forms.Label searchperiodicalLbl;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PeriodicalDataGridView;
         private System.Windows.Forms.Button addperiodbutton;
         private System.Windows.Forms.Button updateperiodbutton;
         private System.Windows.Forms.Button deleteperiodbutton;
         private System.Windows.Forms.Button clearperiodbutton;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button Searchbutton;
+        private System.Windows.Forms.BindingSource periodBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pCategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumeNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pageNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shelfNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodicalcategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumenumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shelfnumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagenumber;
     }
 }

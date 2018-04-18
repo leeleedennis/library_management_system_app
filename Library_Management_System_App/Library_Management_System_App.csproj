@@ -32,8 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyEncryption.1.0.2\lib\EasyEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +71,9 @@
     </Compile>
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs">
+      <DependentUpon>libraryManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Check_In_Book.cs">
       <SubType>Form</SubType>
@@ -81,6 +99,21 @@
     <Compile Include="Disable_UserAcc.Designer.cs">
       <DependentUpon>Disable_UserAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="libraryManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libraryManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="libraryManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="libraryManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libraryManagement.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +125,9 @@
     </Compile>
     <Compile Include="Member_Information.Designer.cs">
       <DependentUpon>Member_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Period.cs">
+      <DependentUpon>libraryManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Periodical.cs">
       <SubType>Form</SubType>
@@ -106,6 +142,12 @@
     </Compile>
     <Compile Include="Reset_Password.Designer.cs">
       <DependentUpon>Reset_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>libraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>libraryManagement.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Add_Book.resx">
       <DependentUpon>Add_Book.cs</DependentUpon>
@@ -147,6 +189,19 @@
     <EmbeddedResource Include="Reset_Password.resx">
       <DependentUpon>Reset_Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="libraryManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>libraryManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="libraryManagement.edmx.diagram">
+      <DependentUpon>libraryManagement.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Book.datasource" />
+    <None Include="Properties\DataSources\Model.Student.datasource" />
+    <None Include="Properties\DataSources\Period.datasource" />
+    <None Include="Properties\DataSources\Student.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,13 +213,44 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Library.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libraryManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>libraryManagement.Context.cs</LastGenOutput>
+      <DependentUpon>libraryManagement.edmx</DependentUpon>
+    </Content>
+    <Content Include="libraryManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>libraryManagement.edmx</DependentUpon>
+      <LastGenOutput>libraryManagement.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{5bc8c730-8dbd-49ba-b407-2597011522a6}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{14a391b2-94f6-4a3d-aefa-e117c2586ab4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentLayer\StudentLayer.csproj">
+      <Project>{e575ed1e-5f79-4a8c-b273-fc127e5519df}</Project>
+      <Name>StudentLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

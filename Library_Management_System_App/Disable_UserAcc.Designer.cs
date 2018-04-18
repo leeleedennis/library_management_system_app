@@ -28,14 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchLbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.UserDataGridView = new System.Windows.Forms.DataGridView();
             this.disableBtn = new System.Windows.Forms.Button();
-            this.viewbutton = new System.Windows.Forms.Button();
+            this.userdeletebtn = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Searchbutton = new System.Windows.Forms.Button();
+            this.userid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdby = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.UserDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,49 +74,71 @@
             this.SearchLbl.TabIndex = 0;
             this.SearchLbl.Text = "Search:";
             // 
-            // textBox1
+            // searchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 122);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(533, 23);
-            this.textBox1.TabIndex = 1;
+            this.searchBox.Location = new System.Drawing.Point(116, 122);
+            this.searchBox.Multiline = true;
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(421, 23);
+            this.searchBox.TabIndex = 1;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // dataGridView1
+            // UserDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(116, 151);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(533, 217);
-            this.dataGridView1.TabIndex = 2;
+            this.UserDataGridView.AllowUserToAddRows = false;
+            this.UserDataGridView.AllowUserToDeleteRows = false;
+            this.UserDataGridView.AutoGenerateColumns = false;
+            this.UserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UserDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userid,
+            this.idDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.type,
+            this.dateCreatedDataGridViewTextBoxColumn,
+            this.createdbyDataGridViewTextBoxColumn,
+            this.createdby,
+            this.typeDataGridViewTextBoxColumn,
+            this.username,
+            this.datecreated,
+            this.password});
+            this.UserDataGridView.DataSource = this.userBindingSource;
+            this.UserDataGridView.Location = new System.Drawing.Point(49, 162);
+            this.UserDataGridView.Name = "UserDataGridView";
+            this.UserDataGridView.Size = new System.Drawing.Size(618, 258);
+            this.UserDataGridView.TabIndex = 2;
+            this.UserDataGridView.SelectionChanged += new System.EventHandler(this.UserDataGridView_SelectionChanged);
+            this.UserDataGridView.DoubleClick += new System.EventHandler(this.UserDataGridView_DoubleClick);
             // 
             // disableBtn
             // 
             this.disableBtn.BackColor = System.Drawing.SystemColors.Highlight;
             this.disableBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disableBtn.Location = new System.Drawing.Point(144, 402);
+            this.disableBtn.Location = new System.Drawing.Point(144, 426);
             this.disableBtn.Name = "disableBtn";
             this.disableBtn.Size = new System.Drawing.Size(95, 33);
             this.disableBtn.TabIndex = 3;
-            this.disableBtn.Text = "Disable";
+            this.disableBtn.Text = "Reset";
             this.disableBtn.UseVisualStyleBackColor = false;
+            this.disableBtn.Click += new System.EventHandler(this.disableBtn_Click);
             // 
-            // viewbutton
+            // userdeletebtn
             // 
-            this.viewbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.viewbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewbutton.Location = new System.Drawing.Point(347, 402);
-            this.viewbutton.Name = "viewbutton";
-            this.viewbutton.Size = new System.Drawing.Size(95, 33);
-            this.viewbutton.TabIndex = 3;
-            this.viewbutton.Text = "View All";
-            this.viewbutton.UseVisualStyleBackColor = false;
+            this.userdeletebtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.userdeletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userdeletebtn.Location = new System.Drawing.Point(348, 426);
+            this.userdeletebtn.Name = "userdeletebtn";
+            this.userdeletebtn.Size = new System.Drawing.Size(95, 33);
+            this.userdeletebtn.TabIndex = 3;
+            this.userdeletebtn.Text = "Delete";
+            this.userdeletebtn.UseVisualStyleBackColor = false;
+            this.userdeletebtn.Click += new System.EventHandler(this.userdeletebtn_Click);
             // 
             // Cancelbutton
             // 
             this.Cancelbutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.Cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancelbutton.Location = new System.Drawing.Point(554, 402);
+            this.Cancelbutton.Location = new System.Drawing.Point(540, 426);
             this.Cancelbutton.Name = "Cancelbutton";
             this.Cancelbutton.Size = new System.Drawing.Size(95, 33);
             this.Cancelbutton.TabIndex = 4;
@@ -108,22 +146,127 @@
             this.Cancelbutton.UseVisualStyleBackColor = false;
             this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
+            // Searchbutton
+            // 
+            this.Searchbutton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Searchbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Searchbutton.Location = new System.Drawing.Point(572, 114);
+            this.Searchbutton.Name = "Searchbutton";
+            this.Searchbutton.Size = new System.Drawing.Size(95, 33);
+            this.Searchbutton.TabIndex = 5;
+            this.Searchbutton.Text = "Search";
+            this.Searchbutton.UseVisualStyleBackColor = false;
+            // 
+            // userid
+            // 
+            this.userid.DataPropertyName = "Id";
+            this.userid.HeaderText = "Id";
+            this.userid.Name = "userid";
+            this.userid.Visible = false;
+            // 
+            // type
+            // 
+            this.type.DataPropertyName = "Type";
+            this.type.HeaderText = "Type";
+            this.type.Name = "type";
+            this.type.Visible = false;
+            // 
+            // createdby
+            // 
+            this.createdby.DataPropertyName = "Created_by";
+            this.createdby.HeaderText = "Created By";
+            this.createdby.Name = "createdby";
+            this.createdby.Visible = false;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "User_Name";
+            this.username.HeaderText = "User Name";
+            this.username.Name = "username";
+            this.username.Visible = false;
+            this.username.Width = 177;
+            // 
+            // datecreated
+            // 
+            this.datecreated.DataPropertyName = "Date_Created";
+            this.datecreated.HeaderText = "Date Created";
+            this.datecreated.Name = "datecreated";
+            this.datecreated.Visible = false;
+            this.datecreated.Width = 150;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "Password";
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            this.password.Visible = false;
+            this.password.Width = 150;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 20;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "User_Name";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "User Name";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // dateCreatedDataGridViewTextBoxColumn
+            // 
+            this.dateCreatedDataGridViewTextBoxColumn.DataPropertyName = "Date_Created";
+            this.dateCreatedDataGridViewTextBoxColumn.HeaderText = "Date Created";
+            this.dateCreatedDataGridViewTextBoxColumn.Name = "dateCreatedDataGridViewTextBoxColumn";
+            this.dateCreatedDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // createdbyDataGridViewTextBoxColumn
+            // 
+            this.createdbyDataGridViewTextBoxColumn.DataPropertyName = "Created_by";
+            this.createdbyDataGridViewTextBoxColumn.HeaderText = "Created By";
+            this.createdbyDataGridViewTextBoxColumn.Name = "createdbyDataGridViewTextBoxColumn";
+            this.createdbyDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Library_Management_System_App.User);
+            // 
             // Disable_UserAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(735, 471);
+            this.Controls.Add(this.Searchbutton);
             this.Controls.Add(this.Cancelbutton);
-            this.Controls.Add(this.viewbutton);
+            this.Controls.Add(this.userdeletebtn);
             this.Controls.Add(this.disableBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UserDataGridView);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.SearchLbl);
             this.Controls.Add(this.label1);
             this.Name = "Disable_UserAcc";
             this.Text = "Manage Users";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Disable_UserAcc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.UserDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,10 +276,24 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label SearchLbl;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.DataGridView UserDataGridView;
         private System.Windows.Forms.Button disableBtn;
-        private System.Windows.Forms.Button viewbutton;
+        private System.Windows.Forms.Button userdeletebtn;
         private System.Windows.Forms.Button Cancelbutton;
+        private System.Windows.Forms.Button Searchbutton;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdbyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdby;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datecreated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }

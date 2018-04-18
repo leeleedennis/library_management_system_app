@@ -30,16 +30,16 @@
         {
             this.titleLabl = new System.Windows.Forms.Label();
             this.usertypeLb = new System.Windows.Forms.Label();
-            this.selecttypecomboBox = new System.Windows.Forms.ComboBox();
             this.createAccbutton = new System.Windows.Forms.Button();
             this.TypeusernameLbl = new System.Windows.Forms.Label();
             this.typepasswordLbl = new System.Windows.Forms.Label();
             this.typeconfirmpasswordLbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.typePasswordtextBox = new System.Windows.Forms.TextBox();
-            this.typeconfirmpasstextBox = new System.Windows.Forms.TextBox();
+            this.UserBox = new System.Windows.Forms.TextBox();
+            this.PasswordtextBox = new System.Windows.Forms.TextBox();
+            this.confirmpasstextBox = new System.Windows.Forms.TextBox();
             this.backbutton = new System.Windows.Forms.Button();
             this.cancelbutton = new System.Windows.Forms.Button();
+            this.typetb = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // titleLabl
@@ -56,25 +56,11 @@
             // 
             this.usertypeLb.AutoSize = true;
             this.usertypeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.usertypeLb.Location = new System.Drawing.Point(48, 95);
+            this.usertypeLb.Location = new System.Drawing.Point(48, 115);
             this.usertypeLb.Name = "usertypeLb";
-            this.usertypeLb.Size = new System.Drawing.Size(145, 20);
+            this.usertypeLb.Size = new System.Drawing.Size(100, 20);
             this.usertypeLb.TabIndex = 0;
-            this.usertypeLb.Text = "Select type of user:";
-            // 
-            // selecttypecomboBox
-            // 
-            this.selecttypecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.selecttypecomboBox.FormattingEnabled = true;
-            this.selecttypecomboBox.Items.AddRange(new object[] {
-            "ADMIN",
-            "STUDENT",
-            "TEACHER"});
-            this.selecttypecomboBox.Location = new System.Drawing.Point(217, 95);
-            this.selecttypecomboBox.Name = "selecttypecomboBox";
-            this.selecttypecomboBox.Size = new System.Drawing.Size(136, 28);
-            this.selecttypecomboBox.TabIndex = 1;
-            this.selecttypecomboBox.Text = "(Select Item)";
+            this.usertypeLb.Text = "Type of user:";
             // 
             // createAccbutton
             // 
@@ -83,9 +69,10 @@
             this.createAccbutton.Location = new System.Drawing.Point(193, 322);
             this.createAccbutton.Name = "createAccbutton";
             this.createAccbutton.Size = new System.Drawing.Size(160, 33);
-            this.createAccbutton.TabIndex = 5;
+            this.createAccbutton.TabIndex = 4;
             this.createAccbutton.Text = "Create Account";
             this.createAccbutton.UseVisualStyleBackColor = false;
+            this.createAccbutton.Click += new System.EventHandler(this.createAccbutton_Click);
             // 
             // TypeusernameLbl
             // 
@@ -117,34 +104,35 @@
             this.typeconfirmpasswordLbl.TabIndex = 0;
             this.typeconfirmpasswordLbl.Text = "Confirm Password:";
             // 
-            // textBox1
+            // UserBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(217, 151);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 30);
-            this.textBox1.TabIndex = 3;
+            this.UserBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.UserBox.Location = new System.Drawing.Point(217, 151);
+            this.UserBox.Multiline = true;
+            this.UserBox.Name = "UserBox";
+            this.UserBox.Size = new System.Drawing.Size(178, 30);
+            this.UserBox.TabIndex = 1;
+            this.UserBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // typePasswordtextBox
+            // PasswordtextBox
             // 
-            this.typePasswordtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.typePasswordtextBox.Location = new System.Drawing.Point(217, 192);
-            this.typePasswordtextBox.Multiline = true;
-            this.typePasswordtextBox.Name = "typePasswordtextBox";
-            this.typePasswordtextBox.PasswordChar = '*';
-            this.typePasswordtextBox.Size = new System.Drawing.Size(178, 30);
-            this.typePasswordtextBox.TabIndex = 3;
+            this.PasswordtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.PasswordtextBox.Location = new System.Drawing.Point(217, 192);
+            this.PasswordtextBox.Multiline = true;
+            this.PasswordtextBox.Name = "PasswordtextBox";
+            this.PasswordtextBox.PasswordChar = '*';
+            this.PasswordtextBox.Size = new System.Drawing.Size(178, 30);
+            this.PasswordtextBox.TabIndex = 2;
             // 
-            // typeconfirmpasstextBox
+            // confirmpasstextBox
             // 
-            this.typeconfirmpasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.typeconfirmpasstextBox.Location = new System.Drawing.Point(217, 234);
-            this.typeconfirmpasstextBox.Multiline = true;
-            this.typeconfirmpasstextBox.Name = "typeconfirmpasstextBox";
-            this.typeconfirmpasstextBox.PasswordChar = '*';
-            this.typeconfirmpasstextBox.Size = new System.Drawing.Size(178, 30);
-            this.typeconfirmpasstextBox.TabIndex = 4;
+            this.confirmpasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.confirmpasstextBox.Location = new System.Drawing.Point(217, 234);
+            this.confirmpasstextBox.Multiline = true;
+            this.confirmpasstextBox.Name = "confirmpasstextBox";
+            this.confirmpasstextBox.PasswordChar = '*';
+            this.confirmpasstextBox.Size = new System.Drawing.Size(178, 30);
+            this.confirmpasstextBox.TabIndex = 3;
             // 
             // backbutton
             // 
@@ -153,7 +141,7 @@
             this.backbutton.Location = new System.Drawing.Point(52, 411);
             this.backbutton.Name = "backbutton";
             this.backbutton.Size = new System.Drawing.Size(118, 33);
-            this.backbutton.TabIndex = 6;
+            this.backbutton.TabIndex = 5;
             this.backbutton.Text = "Back";
             this.backbutton.UseVisualStyleBackColor = false;
             // 
@@ -164,10 +152,26 @@
             this.cancelbutton.Location = new System.Drawing.Point(377, 411);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(114, 33);
-            this.cancelbutton.TabIndex = 7;
+            this.cancelbutton.TabIndex = 6;
             this.cancelbutton.Text = "Cancel";
             this.cancelbutton.UseVisualStyleBackColor = false;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
+            // 
+            // typetb
+            // 
+            this.typetb.BackColor = System.Drawing.Color.White;
+            this.typetb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typetb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typetb.ForeColor = System.Drawing.Color.Black;
+            this.typetb.FormattingEnabled = true;
+            this.typetb.ItemHeight = 20;
+            this.typetb.Items.AddRange(new object[] {
+            "Admin",
+            "Teacher"});
+            this.typetb.Location = new System.Drawing.Point(217, 112);
+            this.typetb.Name = "typetb";
+            this.typetb.Size = new System.Drawing.Size(178, 28);
+            this.typetb.TabIndex = 0;
             // 
             // Create_Account
             // 
@@ -175,16 +179,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(518, 472);
+            this.Controls.Add(this.typetb);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.backbutton);
-            this.Controls.Add(this.typeconfirmpasstextBox);
-            this.Controls.Add(this.typePasswordtextBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.confirmpasstextBox);
+            this.Controls.Add(this.PasswordtextBox);
+            this.Controls.Add(this.UserBox);
             this.Controls.Add(this.typeconfirmpasswordLbl);
             this.Controls.Add(this.typepasswordLbl);
             this.Controls.Add(this.TypeusernameLbl);
             this.Controls.Add(this.createAccbutton);
-            this.Controls.Add(this.selecttypecomboBox);
             this.Controls.Add(this.usertypeLb);
             this.Controls.Add(this.titleLabl);
             this.Name = "Create_Account";
@@ -198,15 +202,15 @@
 
         private System.Windows.Forms.Label titleLabl;
         private System.Windows.Forms.Label usertypeLb;
-        private System.Windows.Forms.ComboBox selecttypecomboBox;
         private System.Windows.Forms.Button createAccbutton;
         private System.Windows.Forms.Label TypeusernameLbl;
         private System.Windows.Forms.Label typepasswordLbl;
         private System.Windows.Forms.Label typeconfirmpasswordLbl;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox typePasswordtextBox;
-        private System.Windows.Forms.TextBox typeconfirmpasstextBox;
+        private System.Windows.Forms.TextBox UserBox;
+        private System.Windows.Forms.TextBox PasswordtextBox;
+        private System.Windows.Forms.TextBox confirmpasstextBox;
         private System.Windows.Forms.Button backbutton;
         private System.Windows.Forms.Button cancelbutton;
+        private System.Windows.Forms.ComboBox typetb;
     }
 }

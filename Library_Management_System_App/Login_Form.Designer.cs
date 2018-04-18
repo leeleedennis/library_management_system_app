@@ -35,7 +35,6 @@
             this.passwordLbl = new System.Windows.Forms.Label();
             this.usernameTb = new System.Windows.Forms.TextBox();
             this.passwordTb = new System.Windows.Forms.TextBox();
-            this.forgetLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // login_button
@@ -114,17 +113,6 @@
             this.passwordTb.Size = new System.Drawing.Size(169, 28);
             this.passwordTb.TabIndex = 2;
             // 
-            // forgetLbl
-            // 
-            this.forgetLbl.AutoSize = true;
-            this.forgetLbl.BackColor = System.Drawing.Color.Transparent;
-            this.forgetLbl.Location = new System.Drawing.Point(138, 159);
-            this.forgetLbl.Name = "forgetLbl";
-            this.forgetLbl.Size = new System.Drawing.Size(92, 13);
-            this.forgetLbl.TabIndex = 0;
-            this.forgetLbl.Text = "Forget Password?";
-            this.forgetLbl.Click += new System.EventHandler(this.forgetLbl_Click);
-            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +120,6 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(355, 289);
-            this.Controls.Add(this.forgetLbl);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.usernameTb);
             this.Controls.Add(this.passwordLbl);
@@ -158,7 +145,6 @@
         private System.Windows.Forms.Label passwordLbl;
         private System.Windows.Forms.TextBox usernameTb;
         private System.Windows.Forms.TextBox passwordTb;
-        private System.Windows.Forms.Label forgetLbl;
     }
 }
 
