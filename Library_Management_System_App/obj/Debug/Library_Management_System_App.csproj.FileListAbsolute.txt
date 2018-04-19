@@ -117,3 +117,16 @@ C:\Users\Shaun-Mikal Thompson\Desktop\library_management_system_app-master\Libra
 C:\Users\Shaun-Mikal Thompson\Desktop\library_management_system_app-master\Library_Management_System_App\obj\Debug\Library_Management_System_App.exe
 C:\Users\Shaun-Mikal Thompson\Desktop\library_management_system_app-master\Library_Management_System_App\obj\Debug\Library_Management_System_App.pdb
 C:\Users\Shaun-Mikal Thompson\Desktop\library_management_system_app-master\Library_Management_System_App\bin\Debug\SubSonic.Core.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\DataLayer.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\EasyEncryption.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\EntityFramework.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\Model.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\StudentLayer.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\SubSonic.Core.dll
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\DataLayer.pdb
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\Model.pdb
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\Model.dll.config
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\StudentLayer.pdb
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\EntityFramework.xml
+C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\bin\Debug\EntityFramework.SqlServer.xml

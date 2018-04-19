@@ -13,6 +13,7 @@ namespace LMS_WebApplication.Controllers
     public class UsersController : Controller
     {
         private LibraryManagementEntities db = new LibraryManagementEntities();
+        private int tempId;
 
         // GET: Users
         public ActionResult Index()
@@ -51,9 +52,14 @@ namespace LMS_WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.User_Name = TempData["StudId"] as string;
+                user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
+                user.Type = "Student";
+                user.Date_Created = DateTime.Now;
+                user.Created_by = "Online Portal";
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
 
             return View(user);
@@ -126,23 +132,58 @@ namespace LMS_WebApplication.Controllers
         }
 
         //Users Login
-        public ActionResult Login(User user)
+        public ActionResult Login()
         {
-            using (db)
-            {
-                var usr = db.Users.Where(q => q.User_Name == user.User_Name && q.Password == user.Password).FirstOrDefault();
-                if (usr != null)
-                {
-                    Session["Username"] = usr.User_Name.ToString();
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Username or password Incorrect");
-                }
-
-            }
             return View();
         }
-     }
+
+        [HttpPost]
+        public ActionResult Login(User user)
+        {
+            user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
+            var usr = db.Users.Any(q => q.User_Name == user.User_Name && q.Password == user.Password);
+            if (usr)
+            {
+                Session["Username"] = user.User_Name.ToString();
+                tempId = user.Id;
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Username or password Incorrect");
+            return View();
+        
+        }
+
+        // GET: Users/Edit/5
+        public ActionResult ChangePassword(int? tempId)
+        {
+            if (tempId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var id = tempId;
+            User user = db.Users.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
+
+        // POST: Users/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword([Bind(Include = "Id,Password")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
+                db.Entry(user).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user);
+        }
+    }
 }

@@ -37,21 +37,7 @@ namespace Library_Management_System_App
         {
             username_text = usernameTb.Text;
             password_text = passwordTb.Text;
-            /*var username = "admin";
-            var password = "password";
-
-               if (username == usernameTb.Text && password == passwordTb.Text)
-                {
-                    this.Close();
-                    setStatus(1);
-                }
-                else
-                {
-                    MessageBox.Show("Password or Username Incorrect.");
-                    this.usernameTb.Text = "";
-                    this.passwordTb.Text = "";
-                }*/
-
+            
             password_text = EasyEncryption.SHA.ComputeSHA256Hash(password_text);
 
             var IsAnyUser = ctx.Users.Any(q => q.User_Name == username_text && q.Password == password_text && q.Type == "Admin" );

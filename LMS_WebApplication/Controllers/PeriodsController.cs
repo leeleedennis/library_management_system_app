@@ -10,108 +10,107 @@ using LMS_WebApplication;
 
 namespace LMS_WebApplication.Controllers
 {
-    public class StudentsController : Controller
+    public class PeriodsController : Controller
     {
         private LibraryManagementEntities db = new LibraryManagementEntities();
 
-        // GET: Students
+        // GET: Periods
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View(db.Periods.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: Periods/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Period period = db.Periods.Find(id);
+            if (period == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(period);
         }
 
-        // GET: Students/Create
+        // GET: Periods/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Periods/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,StudentID,L_Name,F_Name,Class")] Student student)
+        public ActionResult Create([Bind(Include = "Id,P_Category,Name,ISBN,Volume_Number,Year,Page_Number,Shelf_Num")] Period period)
         {
             if (ModelState.IsValid)
             {
-                TempData["StudId"] = student.StudentID;
-                db.Students.Add(student);
+                db.Periods.Add(period);
                 db.SaveChanges();
-                return RedirectToAction("Create", "Users");
+                return RedirectToAction("Index");
             }
 
-            return View(student);
+            return View(period);
         }
 
-        // GET: Students/Edit/5
+        // GET: Periods/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Period period = db.Periods.Find(id);
+            if (period == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(period);
         }
 
-        // POST: Students/Edit/5
+        // POST: Periods/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,StudentID,L_Name,F_Name,Class")] Student student)
+        public ActionResult Edit([Bind(Include = "Id,P_Category,Name,ISBN,Volume_Number,Year,Page_Number,Shelf_Num")] Period period)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
+                db.Entry(period).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(student);
+            return View(period);
         }
 
-        // GET: Students/Delete/5
+        // GET: Periods/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Period period = db.Periods.Find(id);
+            if (period == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(period);
         }
 
-        // POST: Students/Delete/5
+        // POST: Periods/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Students.Find(id);
-            db.Students.Remove(student);
+            Period period = db.Periods.Find(id);
+            db.Periods.Remove(period);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
