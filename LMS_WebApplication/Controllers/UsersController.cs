@@ -146,7 +146,7 @@ namespace LMS_WebApplication.Controllers
             {
                 Session["Username"] = user.User_Name.ToString();
                 tempId = user.Id;
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Books");
             }
             ModelState.AddModelError("", "Username or password Incorrect");
             return View();

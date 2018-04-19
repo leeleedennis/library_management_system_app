@@ -18,7 +18,15 @@
                 </button>
                 @Html.ActionLink("LMS Student Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-           
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Books", "Index", "Books")</li>
+                    <li>@Html.ActionLink("Periodicals", "Index", "Periods")</li>
+                    <li>@Html.ActionLink("Edit Info", "Edit", "Students")</li>
+                    <li>@Html.ActionLink("Change Password", "ChangePassword", "Users")</li>
+
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container body-content">
