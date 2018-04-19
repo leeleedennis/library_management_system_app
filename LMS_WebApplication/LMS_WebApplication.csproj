@@ -264,11 +264,16 @@
     <Content Include="Views\Periods\Details.cshtml" />
     <Content Include="Views\Periods\Edit.cshtml" />
     <Content Include="Views\Periods\Index.cshtml" />
-    <Content Include="Views\Users\ChangePassword.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\_Layout2.cshtml" />
     <Content Include="Views\Books\_ViewStart.cshtml" />
     <Content Include="Views\Periods\_ViewStart.cshtml" />
+    <Content Include="Views\Books\Welcome.cshtml" />
+    <Content Include="Views\Users\_ViewStart.cshtml" />
+    <Content Include="Views\Students\_ViewStart.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
+    <Content Include="Views\Users\ChangePassword.cshtml" />
+    <Content Include="Views\Users\Logout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

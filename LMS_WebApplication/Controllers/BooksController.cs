@@ -123,5 +123,10 @@ namespace LMS_WebApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Welcome()
+        {
+            return View();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace LMS_WebApplication.Controllers
     public class UsersController : Controller
     {
         private LibraryManagementEntities db = new LibraryManagementEntities();
-        private int tempId;
+        public string tempId;
 
         // GET: Users
         public ActionResult Index()
@@ -145,8 +145,8 @@ namespace LMS_WebApplication.Controllers
             if (usr)
             {
                 Session["Username"] = user.User_Name.ToString();
-                tempId = user.Id;
-                return RedirectToAction("Index", "Books");
+                tempId = user.User_Name;
+                return RedirectToAction("Welcome", "Books");
             }
             ModelState.AddModelError("", "Username or password Incorrect");
             return View();
@@ -154,14 +154,14 @@ namespace LMS_WebApplication.Controllers
         }
 
         // GET: Users/Edit/5
-        public ActionResult ChangePassword(int? tempId)
+        public ActionResult ChangePassword()
         {
-            if (tempId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var id = tempId;
-            User user = db.Users.Find(id);
+                /*if (tempId == )
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }*/
+            
+            User user = db.Users.Where(q=> q.User_Name == tempId).FirstOrDefault();
             if (user == null)
             {
                 return HttpNotFound();
@@ -174,16 +174,23 @@ namespace LMS_WebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangePassword([Bind(Include = "Id,Password")] User user)
+        public ActionResult ChangePassword([Bind(Include = "User_Name, Password")] User user)
         {
             if (ModelState.IsValid)
             {
                 user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             return View(user);
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            Session.Abandon();
+            return RedirectToAction("Index","Home");
         }
     }
 }
