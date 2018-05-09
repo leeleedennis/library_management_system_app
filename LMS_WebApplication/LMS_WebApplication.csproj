@@ -270,10 +270,11 @@
     <Content Include="Views\Periods\_ViewStart.cshtml" />
     <Content Include="Views\Books\Welcome.cshtml" />
     <Content Include="Views\Users\_ViewStart.cshtml" />
-    <Content Include="Views\Students\_ViewStart.cshtml" />
     <Content Include="Views\Home\_ViewStart.cshtml" />
     <Content Include="Views\Users\ChangePassword.cshtml" />
     <Content Include="Views\Users\Logout.cshtml" />
+    <Content Include="Views\Students\EditInfo.cshtml" />
+    <Content Include="Views\Students\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

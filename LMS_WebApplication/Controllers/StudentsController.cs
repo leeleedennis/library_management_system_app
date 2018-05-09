@@ -124,5 +124,36 @@ namespace LMS_WebApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult EditInfo()
+        {
+            string studentId = Session["Username"].ToString();
+            Student student = db.Students.FirstOrDefault(q => q.StudentID == studentId);
+            if (student == null)
+            {
+                return HttpNotFound();
+            }
+            return View(student);
+        }
+
+        // POST: Users/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditInfo([Bind(Include = "Id,L_Name,F_Name,Class")] Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                var u = db.Students.FirstOrDefault(q => q.Id == student.Id);
+                u.L_Name = student.L_Name;
+                u.F_Name = student.F_Name;
+                u.Class = student.Class;
+                db.Entry(u).State = EntityState.Modified;
+                db.SaveChanges();
+                
+            }
+            return View("~Views/_Layout2.cshtml", student);
+        }
     }
 }

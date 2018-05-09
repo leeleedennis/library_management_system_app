@@ -141,7 +141,7 @@ namespace LMS_WebApplication.Controllers
         public ActionResult Login(User user)
         {
             user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
-            var usr = db.Users.Any(q => q.User_Name == user.User_Name && q.Password == user.Password);
+            var usr = db.Users.Any(q => q.User_Name == user.User_Name && q.Password == user.Password && q.Type == "Student");
             if (usr)
             {
                 Session["Username"] = user.User_Name.ToString();
