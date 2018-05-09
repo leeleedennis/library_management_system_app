@@ -42,7 +42,6 @@
           <Property Name="L_Name" Type="nvarchar" MaxLength="30" />
           <Property Name="F_Name" Type="nvarchar" MaxLength="30" />
           <Property Name="Class" Type="nvarchar" MaxLength="20" />
-          <Property Name="Address" Type="nvarchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -89,7 +88,6 @@
           <Property Name="L_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="F_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="LibraryManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Books" EntityType="Self.Book" />
@@ -151,7 +149,6 @@
                 <ScalarProperty Name="L_Name" ColumnName="L_Name" />
                 <ScalarProperty Name="F_Name" ColumnName="F_Name" />
                 <ScalarProperty Name="Class" ColumnName="Class" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

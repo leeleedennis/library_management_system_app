@@ -45,62 +45,68 @@
             // titleLabl
             // 
             this.titleLabl.AutoSize = true;
-            this.titleLabl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.titleLabl.Location = new System.Drawing.Point(131, 20);
+            this.titleLabl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.titleLabl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.titleLabl.Location = new System.Drawing.Point(46, 40);
             this.titleLabl.Name = "titleLabl";
-            this.titleLabl.Size = new System.Drawing.Size(264, 31);
+            this.titleLabl.Size = new System.Drawing.Size(282, 31);
             this.titleLabl.TabIndex = 0;
             this.titleLabl.Text = "Create New Account";
             // 
             // usertypeLb
             // 
             this.usertypeLb.AutoSize = true;
-            this.usertypeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.usertypeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.usertypeLb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.usertypeLb.Location = new System.Drawing.Point(48, 115);
             this.usertypeLb.Name = "usertypeLb";
-            this.usertypeLb.Size = new System.Drawing.Size(100, 20);
+            this.usertypeLb.Size = new System.Drawing.Size(113, 20);
             this.usertypeLb.TabIndex = 0;
             this.usertypeLb.Text = "Type of user:";
             // 
             // createAccbutton
             // 
             this.createAccbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.createAccbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.createAccbutton.Location = new System.Drawing.Point(193, 322);
+            this.createAccbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.createAccbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.createAccbutton.Location = new System.Drawing.Point(217, 295);
             this.createAccbutton.Name = "createAccbutton";
-            this.createAccbutton.Size = new System.Drawing.Size(160, 33);
+            this.createAccbutton.Size = new System.Drawing.Size(84, 33);
             this.createAccbutton.TabIndex = 4;
-            this.createAccbutton.Text = "Create Account";
+            this.createAccbutton.Text = "Create";
             this.createAccbutton.UseVisualStyleBackColor = false;
             this.createAccbutton.Click += new System.EventHandler(this.createAccbutton_Click);
             // 
             // TypeusernameLbl
             // 
             this.TypeusernameLbl.AutoSize = true;
-            this.TypeusernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TypeusernameLbl.Location = new System.Drawing.Point(48, 151);
+            this.TypeusernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.TypeusernameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TypeusernameLbl.Location = new System.Drawing.Point(48, 154);
             this.TypeusernameLbl.Name = "TypeusernameLbl";
-            this.TypeusernameLbl.Size = new System.Drawing.Size(87, 20);
+            this.TypeusernameLbl.Size = new System.Drawing.Size(96, 20);
             this.TypeusernameLbl.TabIndex = 0;
             this.TypeusernameLbl.Text = "Username:";
             // 
             // typepasswordLbl
             // 
             this.typepasswordLbl.AutoSize = true;
-            this.typepasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.typepasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.typepasswordLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.typepasswordLbl.Location = new System.Drawing.Point(48, 195);
             this.typepasswordLbl.Name = "typepasswordLbl";
-            this.typepasswordLbl.Size = new System.Drawing.Size(82, 20);
+            this.typepasswordLbl.Size = new System.Drawing.Size(91, 20);
             this.typepasswordLbl.TabIndex = 0;
             this.typepasswordLbl.Text = "Password:";
             // 
             // typeconfirmpasswordLbl
             // 
             this.typeconfirmpasswordLbl.AutoSize = true;
-            this.typeconfirmpasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.typeconfirmpasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.typeconfirmpasswordLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.typeconfirmpasswordLbl.Location = new System.Drawing.Point(48, 237);
             this.typeconfirmpasswordLbl.Name = "typeconfirmpasswordLbl";
-            this.typeconfirmpasswordLbl.Size = new System.Drawing.Size(141, 20);
+            this.typeconfirmpasswordLbl.Size = new System.Drawing.Size(158, 20);
             this.typeconfirmpasswordLbl.TabIndex = 0;
             this.typeconfirmpasswordLbl.Text = "Confirm Password:";
             // 
@@ -110,7 +116,7 @@
             this.UserBox.Location = new System.Drawing.Point(217, 151);
             this.UserBox.Multiline = true;
             this.UserBox.Name = "UserBox";
-            this.UserBox.Size = new System.Drawing.Size(178, 30);
+            this.UserBox.Size = new System.Drawing.Size(191, 30);
             this.UserBox.TabIndex = 1;
             this.UserBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -121,7 +127,7 @@
             this.PasswordtextBox.Multiline = true;
             this.PasswordtextBox.Name = "PasswordtextBox";
             this.PasswordtextBox.PasswordChar = '*';
-            this.PasswordtextBox.Size = new System.Drawing.Size(178, 30);
+            this.PasswordtextBox.Size = new System.Drawing.Size(191, 30);
             this.PasswordtextBox.TabIndex = 2;
             // 
             // confirmpasstextBox
@@ -131,16 +137,17 @@
             this.confirmpasstextBox.Multiline = true;
             this.confirmpasstextBox.Name = "confirmpasstextBox";
             this.confirmpasstextBox.PasswordChar = '*';
-            this.confirmpasstextBox.Size = new System.Drawing.Size(178, 30);
+            this.confirmpasstextBox.Size = new System.Drawing.Size(191, 30);
             this.confirmpasstextBox.TabIndex = 3;
             // 
             // backbutton
             // 
             this.backbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.backbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.backbutton.Location = new System.Drawing.Point(52, 411);
+            this.backbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.backbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backbutton.Location = new System.Drawing.Point(217, 363);
             this.backbutton.Name = "backbutton";
-            this.backbutton.Size = new System.Drawing.Size(118, 33);
+            this.backbutton.Size = new System.Drawing.Size(84, 33);
             this.backbutton.TabIndex = 5;
             this.backbutton.Text = "Back";
             this.backbutton.UseVisualStyleBackColor = false;
@@ -148,10 +155,11 @@
             // cancelbutton
             // 
             this.cancelbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cancelbutton.Location = new System.Drawing.Point(377, 411);
+            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cancelbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cancelbutton.Location = new System.Drawing.Point(327, 295);
             this.cancelbutton.Name = "cancelbutton";
-            this.cancelbutton.Size = new System.Drawing.Size(114, 33);
+            this.cancelbutton.Size = new System.Drawing.Size(81, 33);
             this.cancelbutton.TabIndex = 6;
             this.cancelbutton.Text = "Cancel";
             this.cancelbutton.UseVisualStyleBackColor = false;
@@ -170,7 +178,7 @@
             "Teacher"});
             this.typetb.Location = new System.Drawing.Point(217, 112);
             this.typetb.Name = "typetb";
-            this.typetb.Size = new System.Drawing.Size(178, 28);
+            this.typetb.Size = new System.Drawing.Size(191, 28);
             this.typetb.TabIndex = 0;
             // 
             // Create_Account

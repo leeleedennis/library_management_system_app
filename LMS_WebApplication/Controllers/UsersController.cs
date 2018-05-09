@@ -156,12 +156,12 @@ namespace LMS_WebApplication.Controllers
         // GET: Users/Edit/5
         public ActionResult ChangePassword()
         {
-                /*if (tempId == )
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }*/
-            
-            User user = db.Users.Where(q=> q.User_Name == tempId).FirstOrDefault();
+            /*if (tempId == )
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }*/
+            string username = Session["Username"].ToString();
+            User user = db.Users.FirstOrDefault(q=> q.User_Name == username);
             if (user == null)
             {
                 return HttpNotFound();
@@ -174,12 +174,13 @@ namespace LMS_WebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangePassword([Bind(Include = "User_Name, Password")] User user)
+        public ActionResult ChangePassword([Bind(Include = "Id, User_Name, Password")] User user)
         {
             if (ModelState.IsValid)
             {
-                user.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
-                db.Entry(user).State = EntityState.Modified;
+                var u = db.Users.FirstOrDefault(q => q.Id == user.Id);
+                u.Password = EasyEncryption.SHA.ComputeSHA256Hash(user.Password);
+                db.Entry(u).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Login");
             }

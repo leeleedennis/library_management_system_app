@@ -35,6 +35,7 @@
             this.FnameLbl = new System.Windows.Forms.Label();
             this.classLbl = new System.Windows.Forms.Label();
             this.studentTb = new System.Windows.Forms.TextBox();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lnameTb = new System.Windows.Forms.TextBox();
             this.classTb = new System.Windows.Forms.TextBox();
@@ -42,6 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.searchTb = new System.Windows.Forms.TextBox();
             this.StudentDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,25 +59,19 @@
             this.Deletebutton = new System.Windows.Forms.Button();
             this.Clearbutton = new System.Windows.Forms.Button();
             this.viewbtn = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(325, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(29, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 31);
+            this.label1.Size = new System.Drawing.Size(233, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Register";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -79,10 +79,11 @@
             // sudentidLbl
             // 
             this.sudentidLbl.AutoSize = true;
-            this.sudentidLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.sudentidLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.sudentidLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.sudentidLbl.Location = new System.Drawing.Point(31, 158);
             this.sudentidLbl.Name = "sudentidLbl";
-            this.sudentidLbl.Size = new System.Drawing.Size(91, 20);
+            this.sudentidLbl.Size = new System.Drawing.Size(102, 20);
             this.sudentidLbl.TabIndex = 0;
             this.sudentidLbl.Text = "Student ID:";
             this.sudentidLbl.Click += new System.EventHandler(this.sudentidLbl_Click);
@@ -90,30 +91,33 @@
             // LnameLbl
             // 
             this.LnameLbl.AutoSize = true;
-            this.LnameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.LnameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.LnameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LnameLbl.Location = new System.Drawing.Point(32, 197);
             this.LnameLbl.Name = "LnameLbl";
-            this.LnameLbl.Size = new System.Drawing.Size(90, 20);
+            this.LnameLbl.Size = new System.Drawing.Size(100, 20);
             this.LnameLbl.TabIndex = 0;
             this.LnameLbl.Text = "Last Name:";
             // 
             // FnameLbl
             // 
             this.FnameLbl.AutoSize = true;
-            this.FnameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FnameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.FnameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FnameLbl.Location = new System.Drawing.Point(31, 238);
             this.FnameLbl.Name = "FnameLbl";
-            this.FnameLbl.Size = new System.Drawing.Size(90, 20);
+            this.FnameLbl.Size = new System.Drawing.Size(101, 20);
             this.FnameLbl.TabIndex = 0;
             this.FnameLbl.Text = "First Name:";
             // 
             // classLbl
             // 
             this.classLbl.AutoSize = true;
-            this.classLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.classLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.classLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classLbl.Location = new System.Drawing.Point(32, 278);
             this.classLbl.Name = "classLbl";
-            this.classLbl.Size = new System.Drawing.Size(52, 20);
+            this.classLbl.Size = new System.Drawing.Size(58, 20);
             this.classLbl.TabIndex = 0;
             this.classLbl.Text = "Class:";
             // 
@@ -127,6 +131,10 @@
             this.studentTb.Size = new System.Drawing.Size(205, 27);
             this.studentTb.TabIndex = 0;
             this.studentTb.TextChanged += new System.EventHandler(this.studentTb_TextChanged);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(Library_Management_System_App.Student);
             // 
             // studentBindingSource1
             // 
@@ -165,17 +173,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(376, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Search:";
             // 
             // searchTb
             // 
             this.searchTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.searchTb.Location = new System.Drawing.Point(446, 114);
+            this.searchTb.Location = new System.Drawing.Point(465, 114);
             this.searchTb.Multiline = true;
             this.searchTb.Name = "searchTb";
             this.searchTb.Size = new System.Drawing.Size(387, 27);
@@ -185,6 +194,7 @@
             // StudentDataGridView
             // 
             this.StudentDataGridView.AutoGenerateColumns = false;
+            this.StudentDataGridView.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.StudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -192,21 +202,53 @@
             this.lNameDataGridViewTextBoxColumn,
             this.fNameDataGridViewTextBoxColumn,
             this.classDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
             this.id,
             this.lastname,
             this.firstname,
             this.studentid,
             this.classid,
             this.address});
-            this.StudentDataGridView.DataSource = this.studentBindingSource;
-            this.StudentDataGridView.Location = new System.Drawing.Point(399, 158);
+            this.StudentDataGridView.DataSource = this.studentBindingSource1;
+            this.StudentDataGridView.Location = new System.Drawing.Point(380, 158);
             this.StudentDataGridView.Name = "StudentDataGridView";
-            this.StudentDataGridView.Size = new System.Drawing.Size(717, 303);
+            this.StudentDataGridView.Size = new System.Drawing.Size(567, 303);
             this.StudentDataGridView.TabIndex = 8;
             this.StudentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDataGridView_CellContentClick);
             this.StudentDataGridView.SelectionChanged += new System.EventHandler(this.StudentDataGridView_SelectionChanged);
             this.StudentDataGridView.DoubleClick += new System.EventHandler(this.StudentDataGridView_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 20;
+            // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "L_Name";
+            this.lNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.lNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "F_Name";
+            this.fNameDataGridViewTextBoxColumn.HeaderText = "Fast Name";
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // classDataGridViewTextBoxColumn
+            // 
+            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
+            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
+            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
             // 
             // id
             // 
@@ -256,8 +298,9 @@
             // Addbutton
             // 
             this.Addbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Addbutton.Location = new System.Drawing.Point(138, 480);
+            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.Addbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Addbutton.Location = new System.Drawing.Point(380, 480);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(91, 35);
             this.Addbutton.TabIndex = 5;
@@ -268,8 +311,9 @@
             // Updatebutton
             // 
             this.Updatebutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Updatebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Updatebutton.Location = new System.Drawing.Point(309, 480);
+            this.Updatebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.Updatebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Updatebutton.Location = new System.Drawing.Point(543, 480);
             this.Updatebutton.Name = "Updatebutton";
             this.Updatebutton.Size = new System.Drawing.Size(91, 35);
             this.Updatebutton.TabIndex = 6;
@@ -280,8 +324,9 @@
             // Deletebutton
             // 
             this.Deletebutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Deletebutton.Location = new System.Drawing.Point(484, 480);
+            this.Deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.Deletebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Deletebutton.Location = new System.Drawing.Point(702, 480);
             this.Deletebutton.Name = "Deletebutton";
             this.Deletebutton.Size = new System.Drawing.Size(91, 35);
             this.Deletebutton.TabIndex = 7;
@@ -292,8 +337,9 @@
             // Clearbutton
             // 
             this.Clearbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Clearbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Clearbutton.Location = new System.Drawing.Point(666, 480);
+            this.Clearbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.Clearbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Clearbutton.Location = new System.Drawing.Point(856, 480);
             this.Clearbutton.Name = "Clearbutton";
             this.Clearbutton.Size = new System.Drawing.Size(91, 35);
             this.Clearbutton.TabIndex = 8;
@@ -304,8 +350,9 @@
             // viewbtn
             // 
             this.viewbtn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.viewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.viewbtn.Location = new System.Drawing.Point(856, 109);
+            this.viewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.viewbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.viewbtn.Location = new System.Drawing.Point(874, 109);
             this.viewbtn.Name = "viewbtn";
             this.viewbtn.Size = new System.Drawing.Size(73, 37);
             this.viewbtn.TabIndex = 10;
@@ -313,56 +360,12 @@
             this.viewbtn.UseVisualStyleBackColor = false;
             this.viewbtn.Click += new System.EventHandler(this.viewbtn_Click);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 20;
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            // 
-            // lNameDataGridViewTextBoxColumn
-            // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "L_Name";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
-            this.lNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fNameDataGridViewTextBoxColumn
-            // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "F_Name";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "Fast Name";
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
-            this.fNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // classDataGridViewTextBoxColumn
-            // 
-            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
-            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(Library_Management_System_App.Student);
-            // 
             // Member_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(941, 570);
+            this.ClientSize = new System.Drawing.Size(1097, 570);
             this.Controls.Add(this.viewbtn);
             this.Controls.Add(this.Clearbutton);
             this.Controls.Add(this.Deletebutton);
@@ -384,9 +387,9 @@
             this.Text = "Student Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Member_Information_FormClosing);
             this.Load += new System.EventHandler(this.Member_Information_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,7 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstname;

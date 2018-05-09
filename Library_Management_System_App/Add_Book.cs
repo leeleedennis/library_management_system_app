@@ -274,5 +274,68 @@ namespace Library_Management_System_App
             }
 
         }
+
+        private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void memberInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updatebutton_Click_1(object sender, EventArgs e)
+        {
+            Book bk = new Book();
+
+            if (dataGridView1.CurrentRow.Index != -1)
+            {
+                bk.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
+
+
+
+                bk = ctx.Books.Where(q => q.Id == bk.Id).FirstOrDefault();
+
+                bk.Category = booksubjectTb.Text;
+                bk.Title = booktitleTb.Text;
+                bk.Author = authorTb.Text;
+                bk.Publisher = publisherTb.Text;
+                bk.Year_Released = yearTb.Text;
+                bk.ISBN = isbnTb.Text;
+                bk.Num_of_Copies = numcopiesTb.Text;
+                bk.Pages = pagesTb.Text;
+                bk.Shelf_Number = shelfnumberTb.Text;
+
+                try
+                {
+                    ctx.Entry(bk).State = System.Data.Entity.EntityState.Modified;
+                    ctx.SaveChanges();
+
+                    PopulateDataGridView();
+                    clear();
+
+                    MessageBox.Show("Book updated successfully");
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error cancel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+        }
     }
 }

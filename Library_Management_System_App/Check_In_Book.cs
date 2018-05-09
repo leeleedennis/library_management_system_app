@@ -31,5 +31,20 @@ namespace Library_Management_System_App
         {
            
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fineDateLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkInMemberIDLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

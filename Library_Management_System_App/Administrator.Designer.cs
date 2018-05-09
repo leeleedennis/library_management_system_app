@@ -39,13 +39,18 @@
             this.periodicalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memberInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,11 +72,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem,
-            this.usersToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.enterToolStripMenuItem});
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem2,
+            this.enterToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
@@ -85,90 +93,134 @@
             this.periodicalsToolStripMenuItem,
             this.checkInToolStripMenuItem,
             this.checkOutToolStripMenuItem});
+            this.manageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.manageToolStripMenuItem.Text = "Manage";
             // 
             // booksToolStripMenuItem
             // 
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.booksToolStripMenuItem.Text = "Book Register";
             this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // periodicalsToolStripMenuItem
             // 
             this.periodicalsToolStripMenuItem.Name = "periodicalsToolStripMenuItem";
-            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.periodicalsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.periodicalsToolStripMenuItem.Text = "Periodical";
             this.periodicalsToolStripMenuItem.Click += new System.EventHandler(this.periodicalsToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.checkInToolStripMenuItem.Text = "Check-In";
             this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createAccountToolStripMenuItem,
-            this.deleteAccountToolStripMenuItem,
-            this.memberInformationToolStripMenuItem,
-            this.resetPasswordToolStripMenuItem});
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.usersToolStripMenuItem.Text = "Members";
-            // 
-            // createAccountToolStripMenuItem
-            // 
-            this.createAccountToolStripMenuItem.Name = "createAccountToolStripMenuItem";
-            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.createAccountToolStripMenuItem.Text = "Create Account";
-            this.createAccountToolStripMenuItem.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
-            // 
-            // deleteAccountToolStripMenuItem
-            // 
-            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
-            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.deleteAccountToolStripMenuItem.Text = "Manage Users";
-            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
-            // 
-            // memberInformationToolStripMenuItem
-            // 
-            this.memberInformationToolStripMenuItem.Name = "memberInformationToolStripMenuItem";
-            this.memberInformationToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.memberInformationToolStripMenuItem.Text = "Student Register";
-            this.memberInformationToolStripMenuItem.Click += new System.EventHandler(this.memberInformationToolStripMenuItem_Click);
-            // 
-            // resetPasswordToolStripMenuItem
-            // 
-            this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
-            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.resetPasswordToolStripMenuItem.Text = "Reset Password";
-            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
-            // 
             // logoutToolStripMenuItem
             // 
+            this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // enterToolStripMenuItem
             // 
+            this.enterToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.enterToolStripMenuItem.Name = "enterToolStripMenuItem";
-            this.enterToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.enterToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.enterToolStripMenuItem.Text = "Enter Library";
             this.enterToolStripMenuItem.Click += new System.EventHandler(this.enterToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6});
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem2.Text = "Manage";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItem3.Text = "Book Register";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItem4.Text = "Periodical";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.periodicalsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItem5.Text = "Check-In";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItem6.Text = "Check-Out";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem8,
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11});
+            this.toolStripMenuItem7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(79, 20);
+            this.toolStripMenuItem7.Text = "Members";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem8.Text = "Create Account";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem9.Text = "Manage Users";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem10.Text = "Student Register";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.memberInformationToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem11.Text = "Change Password";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
             // 
             // Administrator
             // 
@@ -177,6 +229,8 @@
             this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Administrator";
@@ -202,13 +256,18 @@
         private System.Windows.Forms.ToolStripMenuItem periodicalsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createAccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem memberInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
     }
 }
 

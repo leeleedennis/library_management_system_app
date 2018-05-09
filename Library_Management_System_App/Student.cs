@@ -19,6 +19,5 @@ namespace Library_Management_System_App
         public string L_Name { get; set; }
         public string F_Name { get; set; }
         public string Class { get; set; }
-        public string Address { get; set; }
     }
 }

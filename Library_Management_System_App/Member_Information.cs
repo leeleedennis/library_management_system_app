@@ -203,7 +203,7 @@ namespace Library_Management_System_App
 
         private void viewbtn_Click(object sender, EventArgs e)
         {
-            StudentDataGridView.DataSource = ctx.Students.ToList();
+            //StudentDataGridView.DataSource = ctx.Students.ToList();
         }
 
         private void searchTb_TextChanged(object sender, EventArgs e)

@@ -44,57 +44,61 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(109, 28);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(27, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 31);
+            this.label1.Size = new System.Drawing.Size(206, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Return A Book";
+            this.label1.Text = "Check-In Book";
             // 
             // checkInbookIdLbl
             // 
             this.checkInbookIdLbl.AutoSize = true;
-            this.checkInbookIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.checkInbookIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.checkInbookIdLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkInbookIdLbl.Location = new System.Drawing.Point(29, 103);
             this.checkInbookIdLbl.Name = "checkInbookIdLbl";
-            this.checkInbookIdLbl.Size = new System.Drawing.Size(71, 20);
+            this.checkInbookIdLbl.Size = new System.Drawing.Size(79, 20);
             this.checkInbookIdLbl.TabIndex = 0;
             this.checkInbookIdLbl.Text = "Book ID:";
             // 
             // checkInMemberIDLbl
             // 
             this.checkInMemberIDLbl.AutoSize = true;
-            this.checkInMemberIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.checkInMemberIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.checkInMemberIDLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkInMemberIDLbl.Location = new System.Drawing.Point(29, 154);
             this.checkInMemberIDLbl.Name = "checkInMemberIDLbl";
-            this.checkInMemberIDLbl.Size = new System.Drawing.Size(92, 20);
+            this.checkInMemberIDLbl.Size = new System.Drawing.Size(102, 20);
             this.checkInMemberIDLbl.TabIndex = 0;
             this.checkInMemberIDLbl.Text = "Member ID:";
+            this.checkInMemberIDLbl.Click += new System.EventHandler(this.checkInMemberIDLbl_Click);
             // 
             // fineDateLbl
             // 
             this.fineDateLbl.AutoSize = true;
-            this.fineDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.fineDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.fineDateLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fineDateLbl.Location = new System.Drawing.Point(29, 203);
             this.fineDateLbl.Name = "fineDateLbl";
-            this.fineDateLbl.Size = new System.Drawing.Size(83, 20);
+            this.fineDateLbl.Size = new System.Drawing.Size(93, 20);
             this.fineDateLbl.TabIndex = 0;
             this.fineDateLbl.Text = "Fine Date:";
+            this.fineDateLbl.Click += new System.EventHandler(this.fineDateLbl_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(162, 103);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 27);
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(162, 156);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 27);
+            this.textBox2.Size = new System.Drawing.Size(168, 20);
             this.textBox2.TabIndex = 2;
             // 
             // finedateTimePicker
@@ -108,8 +112,9 @@
             // returnbutton
             // 
             this.returnbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.returnbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.returnbutton.Location = new System.Drawing.Point(115, 308);
+            this.returnbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.returnbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.returnbutton.Location = new System.Drawing.Point(162, 308);
             this.returnbutton.Name = "returnbutton";
             this.returnbutton.Size = new System.Drawing.Size(75, 30);
             this.returnbutton.TabIndex = 5;
@@ -120,7 +125,8 @@
             // cancelbutton
             // 
             this.cancelbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.cancelbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cancelbutton.Location = new System.Drawing.Point(255, 308);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 30);
@@ -132,19 +138,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(29, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Fine Amount:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // fineamountTb
             // 
             this.fineamountTb.Location = new System.Drawing.Point(162, 250);
-            this.fineamountTb.Multiline = true;
             this.fineamountTb.Name = "fineamountTb";
-            this.fineamountTb.Size = new System.Drawing.Size(168, 27);
+            this.fineamountTb.Size = new System.Drawing.Size(168, 20);
             this.fineamountTb.TabIndex = 4;
             this.fineamountTb.TextChanged += new System.EventHandler(this.fineamountTb_TextChanged);
             // 
@@ -166,7 +173,7 @@
             this.Controls.Add(this.checkInbookIdLbl);
             this.Controls.Add(this.label1);
             this.Name = "Check_In_Book";
-            this.Text = "Return Book";
+            this.Text = "Check-In Book";
             this.ResumeLayout(false);
             this.PerformLayout();
 

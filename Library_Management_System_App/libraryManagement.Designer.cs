@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Quinten\Desktop\library_management_system_app-master\Library_Management_System_App\libraryManagement.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Shaun-Mikal Thompson\Documents\GitHub\library_management_system_app\Library_Management_System_App\libraryManagement.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
