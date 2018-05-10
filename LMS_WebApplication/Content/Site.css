@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: lightblue;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,4 +24,27 @@ textarea {
     max-width: 280px;
 }
 
+.jumbotron {
+    background-color: skyblue;
+    background-image: url('../Images/fatheroflibrary.jpg');
+    background-size: auto;
+    color: white;
+}
 
+.btn-default {
+    background-color: dodgerblue;
+}
+
+.navbar {
+    background-color: dodgerblue;
+}
+
+.navbar-nav{
+    color: white;
+}
+
+.nametext {
+    background: rgba(0,0,0,0);
+    border: none;
+    font-size: 20pt;
+   }

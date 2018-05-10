@@ -40,7 +40,7 @@ namespace Library_Management_System_App
             
             password_text = EasyEncryption.SHA.ComputeSHA256Hash(password_text);
 
-            var IsAnyUser = ctx.Users.Any(q => q.User_Name == username_text && q.Password == password_text && q.Type == "Admin" );
+            var IsAnyUser = ctx.Users.Any(q => q.User_Name == username_text && q.Password == password_text && q.Type != "Student");
 
             
             if (IsAnyUser)

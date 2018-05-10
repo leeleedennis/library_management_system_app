@@ -1,9 +1,20 @@
-﻿
+﻿@model LMS_WebApplication.Student
+
 @{
     ViewBag.Title = "Welcome";
 }
 
-<h2>Welcome</h2>
 
-<h4><br /><br /> please select options from the navigation bar above</h4>
+
+<fieldset>
+    <span class="nametext">Welcome </span>
+    @Html.TextBoxFor(model => model.F_Name, new { @readonly = "readonly", @class = "nametext" })
+    
+</fieldset>
+
+
+<h4><br /> please select options from the navigation bar above</h4>
+
+<img src="~/Images/UPTOWN_college_students_library.jpg" />
+
 

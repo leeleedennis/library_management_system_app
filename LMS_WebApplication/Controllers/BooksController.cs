@@ -126,7 +126,13 @@ namespace LMS_WebApplication.Controllers
 
         public ActionResult Welcome()
         {
-            return View();
+            string studentId = Session["Username"].ToString();
+            Student student = db.Students.FirstOrDefault(q => q.StudentID == studentId);
+            if (student == null)
+            {
+                return HttpNotFound();
+            }
+            return View(student);
         }
     }
 }
