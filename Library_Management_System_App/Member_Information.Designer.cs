@@ -43,6 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.searchTb = new System.Windows.Forms.TextBox();
             this.StudentDataGridView = new System.Windows.Forms.DataGridView();
+            this.Addbutton = new System.Windows.Forms.Button();
+            this.Updatebutton = new System.Windows.Forms.Button();
+            this.Deletebutton = new System.Windows.Forms.Button();
+            this.Clearbutton = new System.Windows.Forms.Button();
+            this.viewbtn = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +59,6 @@
             this.studentid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Addbutton = new System.Windows.Forms.Button();
-            this.Updatebutton = new System.Windows.Forms.Button();
-            this.Deletebutton = new System.Windows.Forms.Button();
-            this.Clearbutton = new System.Windows.Forms.Button();
-            this.viewbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGridView)).BeginInit();
@@ -217,84 +217,6 @@
             this.StudentDataGridView.SelectionChanged += new System.EventHandler(this.StudentDataGridView_SelectionChanged);
             this.StudentDataGridView.DoubleClick += new System.EventHandler(this.StudentDataGridView_DoubleClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 20;
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            // 
-            // lNameDataGridViewTextBoxColumn
-            // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "L_Name";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
-            this.lNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fNameDataGridViewTextBoxColumn
-            // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "F_Name";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "Fast Name";
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
-            this.fNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // classDataGridViewTextBoxColumn
-            // 
-            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
-            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            this.id.Width = 20;
-            // 
-            // lastname
-            // 
-            this.lastname.DataPropertyName = "L_Name";
-            this.lastname.HeaderText = "Last Name";
-            this.lastname.Name = "lastname";
-            this.lastname.Visible = false;
-            this.lastname.Width = 150;
-            // 
-            // firstname
-            // 
-            this.firstname.DataPropertyName = "F_Name";
-            this.firstname.HeaderText = "First Name";
-            this.firstname.Name = "firstname";
-            this.firstname.Visible = false;
-            this.firstname.Width = 150;
-            // 
-            // studentid
-            // 
-            this.studentid.DataPropertyName = "StudentID";
-            this.studentid.HeaderText = "Student ID";
-            this.studentid.Name = "studentid";
-            this.studentid.Visible = false;
-            // 
-            // classid
-            // 
-            this.classid.DataPropertyName = "Class";
-            this.classid.HeaderText = "Class";
-            this.classid.Name = "classid";
-            this.classid.Visible = false;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "Address";
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.Visible = false;
-            this.address.Width = 177;
-            // 
             // Addbutton
             // 
             this.Addbutton.BackColor = System.Drawing.SystemColors.Highlight;
@@ -360,6 +282,84 @@
             this.viewbtn.UseVisualStyleBackColor = false;
             this.viewbtn.Click += new System.EventHandler(this.viewbtn_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 20;
+            // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "L_Name";
+            this.lNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.lNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "F_Name";
+            this.fNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // classDataGridViewTextBoxColumn
+            // 
+            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
+            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
+            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            this.id.Width = 20;
+            // 
+            // lastname
+            // 
+            this.lastname.DataPropertyName = "L_Name";
+            this.lastname.HeaderText = "Last Name";
+            this.lastname.Name = "lastname";
+            this.lastname.Visible = false;
+            this.lastname.Width = 150;
+            // 
+            // firstname
+            // 
+            this.firstname.DataPropertyName = "F_Name";
+            this.firstname.HeaderText = "First Name";
+            this.firstname.Name = "firstname";
+            this.firstname.Visible = false;
+            this.firstname.Width = 150;
+            // 
+            // studentid
+            // 
+            this.studentid.DataPropertyName = "StudentID";
+            this.studentid.HeaderText = "Student ID";
+            this.studentid.Name = "studentid";
+            this.studentid.Visible = false;
+            // 
+            // classid
+            // 
+            this.classid.DataPropertyName = "Class";
+            this.classid.HeaderText = "Class";
+            this.classid.Name = "classid";
+            this.classid.Visible = false;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "Address";
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            this.address.Visible = false;
+            this.address.Width = 177;
+            // 
             // Member_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +415,7 @@
         private System.Windows.Forms.Button Clearbutton;
         private System.Windows.Forms.Button viewbtn;
         private System.Windows.Forms.BindingSource studentBindingSource;
+        private System.Windows.Forms.BindingSource studentBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
@@ -426,6 +427,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studentid;
         private System.Windows.Forms.DataGridViewTextBoxColumn classid;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.BindingSource studentBindingSource1;
     }
 }

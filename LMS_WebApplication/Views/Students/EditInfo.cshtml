@@ -42,12 +42,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Update" class="btn btn-default" />
+                <div class="btn btn-default ">
+                    @Html.ActionLink("Cancel", "Welcome", new { Controller = "Books" }, new { @class = "black" })
+                </div>
             </div>
         </div>
     </div>
 
-    <div>
-        @Html.ActionLink("Home", "Welcome","Books")
-    </div>
 }

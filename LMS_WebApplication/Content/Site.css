@@ -47,4 +47,9 @@ textarea {
     background: rgba(0,0,0,0);
     border: none;
     font-size: 20pt;
-   }
+}
+
+.black, .black:active, .black:link, .black:visited {
+    color: darkslategray;
+    text-decoration: none;
+}

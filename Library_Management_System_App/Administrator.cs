@@ -38,7 +38,7 @@ namespace Library_Management_System_App
             menuStrip1.Items[1].Visible = false;
             menuStrip1.Items[2].Visible = false;
             menuStrip1.Items[3].Visible = false;
-            menuStrip1.Items[4].Visible = false;
+            
         }
 
         public void showItems()
@@ -46,7 +46,7 @@ namespace Library_Management_System_App
             menuStrip1.Items[0].Visible = true;
             menuStrip1.Items[1].Visible = true;
             menuStrip1.Items[2].Visible = true;
-            menuStrip1.Items[4].Visible = true;
+            
         }
 
         public void enterLibrary()
